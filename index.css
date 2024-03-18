@@ -1,0 +1,71 @@
+
+* {
+    margin: none;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* categories */
+
+.category {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* prizes */
+
+.p-holder {
+    flex: 1;
+    height: 300px;
+    width: 20vw;
+    min-width: 25vw;
+    max-width: 50vw;
+    padding: 2rem;
+    margin: 1rem;
+    border: 2px solid grey;
+    text-align: center;
+    /* This aligns items to the end line on main-axis */
+}
+
+
+/* bid-form */
+#form-holder {
+    padding: 2rem;
+    margin: 2rem;
+    border: 2px solid grey;
+    min-width: 80%;
+}
+
+#bid-form {
+    display: block;
+    clear: both;
+}
+
+#bid-form input {
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+#bid-form button {
+    margin: 1rem;
+}
+
+/* media queries */
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .p-pholder {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }
+  }
+  
+  /* Small screens */
+  @media all and (max-width: 500px) {
+    .p-holder {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
