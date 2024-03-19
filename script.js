@@ -7,11 +7,19 @@ let anchors = Array.from(document.getElementsByClassName('cat'))
 console.log(anchors)
 let previous = document.getElementById('previous')
 
-anchors.forEach(anchor => {
+let pre = anchors.forEach(anchor => {
     anchor.addEventListener('click', function(){
         // console.log(this.hash, 'from funct')
+        let prev = this.hash
         previous.setAttribute('href', this.hash)
         // console.log(previous.getAttribute('href'))
+        return prev
 
     })
 });
+
+// submit to redirect
+
+document.getElementById('submit').addEventListener('onClick', function(){
+    location.replace(pre)
+})

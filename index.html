@@ -258,23 +258,26 @@
     <!-- bidding form -->
     <div id="form-holder">
         <h2>Bidding Form</h2>
-        <form action="POST" id="bid-form">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbyqrH6fXaEgW86AwnWquNHfoD2Ug5BlJa0KE4dN3I2AcbyNIaYnPY80lTeH0QeKDr11-Q/exec" id="bid-form">
+            <input type="date" hidden>
             <label for="name">Name:</label>
-            <input name="name" type="text">
+            <input name="Name" type="text">
             <br>
             <label for="email">Email:</label>
-            <input name="email" type="email">
+            <input name="Email" type="email">
             <br>
             <label for="prize">Prize:</label>
-            <input type="search" name="prize" id="p-search">
+            <input type="search" name="Prize" id="p-search">
             <br>
             <label for="amount">Amount (£):</label>
-            <input name="amount" type="number">
+            <input name="Bid" type="number">
             <br>
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
             <a href="#" id="previous">Return</a>
-
         </form>
+        <!-- todo -->
+        <!-- form submit redirect to current location -->
+        <!-- hide the url for sheets -->
     </div>
     <script src="script.js"></script>
 </body>
