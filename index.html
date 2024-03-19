@@ -23,6 +23,7 @@
                 <a href="#garden" class="cat">garden</a>
                 <a href="#holiday" class="cat">holiday</a>
                 <a href="#self" class="cat">self</a>
+                <a href="#bid-form" class="cat">Bid</a>
             </div>
         </nav>
     </header>
@@ -256,15 +257,15 @@
     </div>
     <hr>
     <!-- bidding form -->
+    <h2>Bidding Form</h2>
     <div id="form-holder">
-        <h2>Bidding Form</h2>
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbyqrH6fXaEgW86AwnWquNHfoD2Ug5BlJa0KE4dN3I2AcbyNIaYnPY80lTeH0QeKDr11-Q/exec" id="bid-form">
+        <form method="POST" target="ifrm1" action="https://script.google.com/macros/s/AKfycbwienzSHo71NrI4KbsjmPQVXEoCbw_2nny-Q3wAGmXrf6vGOqC844gurLbH3tN6LYMX5A/exec" id="bid-form">
             <input type="date" hidden>
             <label for="name">Name:</label>
-            <input name="Name" type="text">
+            <input id="name" name="Name" type="text" autocomplete="name">
             <br>
             <label for="email">Email:</label>
-            <input name="Email" type="email">
+            <input name="Email" type="email" autocomplete="email">
             <br>
             <label for="prize">Prize:</label>
             <input type="search" name="Prize" id="p-search">
@@ -275,10 +276,21 @@
             <button id="submit" type="submit">Submit</button>
             <a href="#" id="previous">Return</a>
         </form>
+        <!-- iframe to hide the gsheets status -->
+        <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe>
+
         <!-- todo -->
-        <!-- form submit redirect to current location -->
         <!-- hide the url for sheets -->
+        <!-- fix form and sheet integrations -->
+
     </div>
+
+    <footer>
+        <div>
+            <p>E.Colquhoun 2024</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

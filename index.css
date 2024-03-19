@@ -3,17 +3,30 @@
     margin: none;
 }
 
+body {
+    background-image: linear-gradient(to right, #916e9c, #a584ae, #ba9ac0, #ceb1d2, #e3c8e5, #e1ceee, #ded4f7, #dadbfe, #b5d4f8, #8ecdea, #6dc4d1, #5ebab0);
+}
+
 h1, h2 {
     text-align: center;
 }
 
 hr {
-    background-color: blueviolet;
+    background-color: #75179b;
     width: 70vw;
     height: 5px;
     border-radius: 5px;
     margin: 2rem auto;
 }
+
+/* 
+palate
+#916E9C purp
+#FFE8FF pink
+#5EBAB0 green
+#FFFADE beige
+
+*/
 
 /* navigation */
 nav {
@@ -22,6 +35,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    margin: 1rem;
 }
 
 /* categories */
@@ -44,16 +58,18 @@ nav a {
     margin: 1rem;
     border: 2px solid grey;
     text-align: center;
-    /* This aligns items to the end line on main-axis */
+    background-color: rgba(255, 250, 222, 0.3);
+    border-radius: 2%;
 }
 
 
 /* bid-form */
 #form-holder {
     padding: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     border: 2px solid grey;
     min-width: 80%;
+    background-color: rgba(255, 250, 222, 0.3);
 }
 
 #bid-form {
@@ -68,6 +84,12 @@ nav a {
 
 #bid-form button {
     margin: 1rem;
+}
+
+/* footer */
+footer div {
+    text-align: center;
+    margin: 2rem auto;
 }
 
 /* media queries */
@@ -86,3 +108,5 @@ nav a {
       flex-direction: column;
     }
   }
+
+  /* https://script.google.com/macros/s/AKfycbyqrH6fXaEgW86AwnWquNHfoD2Ug5BlJa0KE4dN3I2AcbyNIaYnPY80lTeH0QeKDr11-Q/exec */
