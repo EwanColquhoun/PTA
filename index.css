@@ -1,10 +1,13 @@
 
 * {
     margin: none;
+    font-family: 'Rebond', 'san-serif';
 }
 
 body {
     background-image: linear-gradient(to right, #916e9c, #a584ae, #ba9ac0, #ceb1d2, #e3c8e5, #e1ceee, #ded4f7, #dadbfe, #b5d4f8, #8ecdea, #6dc4d1, #5ebab0);
+    width: 70vw;
+    margin: auto;
 }
 
 h1, h2 {
@@ -36,6 +39,25 @@ nav {
 nav a {
     text-decoration: none;
     margin: 1rem;
+}
+
+/* BTT button */
+#btt-arrow{
+    mix-blend-mode: difference;
+    color: antiquewhite;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 150px;
+    right: 8vw
+}
+
+.btt-link {
+    cursor: pointer;
+    color: black;
 }
 
 /* categories */
@@ -82,7 +104,7 @@ nav a {
     margin: 1rem 0rem;
 }
 
-#bid-form button {
+#submit {
     margin: 1rem;
 }
 
