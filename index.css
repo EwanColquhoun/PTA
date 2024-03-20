@@ -2,6 +2,7 @@
 * {
     margin: none;
     font-family: 'Rebond', 'san-serif';
+    scroll-behavior: smooth;
 }
 
 body {
@@ -69,8 +70,8 @@ nav a:hover {
     height: 42px;
     width: 42px;
     position: fixed;
-    bottom: 150px;
-    right: 8vw
+    bottom: 70px;
+    right: 6vw
 }
 
 .btt-link {
@@ -100,7 +101,7 @@ nav a:hover {
     border: 2px solid grey;
     text-align: center;
     background-color: rgba(255, 250, 222, 0.3);
-    border-radius: 2%;
+    border-radius: 5px;
     box-shadow: 4px 4px 5px 1px #888888;
     overflow: auto;
 }
@@ -119,8 +120,8 @@ nav a:hover {
 /* bid-form */
 #form-holder {
     padding: 2rem;
-    margin: 1rem;
     border: 2px solid grey;
+    border-radius: 5px;
     min-width: 80%;
     background-color: rgba(255, 250, 222, 0.3);
     box-shadow: 4px 4px 5px 1px #888888;
@@ -150,6 +151,15 @@ form #consent {
     max-width: 30vw;
     height: 30px;
     font-size: larger;
+    border: 2px solid #75179b;
+    color: #75179b;
+    border-radius: 5px;
+}
+
+#submit:hover {
+    border:2px solid whitesmoke;
+    background-color: #75179b;
+    color: whitesmoke;
 }
 
 /* footer */
