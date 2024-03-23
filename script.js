@@ -101,13 +101,18 @@ subBut.addEventListener('click', function(){
 function finishAuction() {
     subBut.setAttribute('disabled', true);
     alert("The PTA silent auction has finished. Thank you.")
-  }
+}
 
-// not 24hr!
-var timeAtFinish = new Date("5/11/2024 11:59:59 PM").getLocalTime('en-UK')
+// not 24hr! NOT wORKING IN USA
+var timeAtFinish = new Date("5/11/2024 11:59:59 PM").getTime()
 let timeNow = new Date().getTime()
 let offsetMillis = timeAtFinish - timeNow;
-setTimeout(finishAuction, offsetMillis);
+if (Math.sign(offsetMillis) == '-1'){
+    setTimeout(finishAuction, offsetMillis);
+} else {
+    console.log(timeAtFinish, timeNow, offsetMillis)
+    console.log('timing error')
+}
 
 // Search Bar
 let list = document.getElementById('list');
@@ -165,4 +170,4 @@ function remove_list(){
     list.style.display = 'none'
 }
 
-window.onload = update_list()
+window.DOMContentLoaded = update_list()
