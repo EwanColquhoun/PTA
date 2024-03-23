@@ -1,5 +1,5 @@
 // Back to top button
-let btt = document.getElementById('btt-link');
+let btt = document.getElementById('back-to-top');
 
 btt.addEventListener('click', function(){
     window.scrollTo(0,0);
@@ -42,6 +42,7 @@ function addTime(){
     let timeBlock = dateGroup.split(' ')[0].slice(0, 5)
     timeInput.value = timeBlock
 }
+
 box.addEventListener('click', function(){
     if (box.checked ==  true){
         addTime()
@@ -100,10 +101,68 @@ subBut.addEventListener('click', function(){
 function finishAuction() {
     subBut.setAttribute('disabled', true);
     alert("The PTA silent auction has finished. Thank you.")
-    console.log('ended')
   }
+
 // not 24hr!
-var timeAtFinish = new Date("5/11/2024 11:59:59 PM").getTime()
+var timeAtFinish = new Date("5/11/2024 11:59:59 PM").getLocalTime('en-UK')
 let timeNow = new Date().getTime()
 let offsetMillis = timeAtFinish - timeNow;
 setTimeout(finishAuction, offsetMillis);
+
+// Search Bar
+let list = document.getElementById('list');
+let bar = document.getElementById('searchbar')
+let prizes = document.getElementsByClassName('prizes');
+
+function update_list(){
+    let pri = Array.from(document.getElementsByClassName('p-title'))
+
+    for (i = 0; i < pri.length; i++){
+        let el = pri[i].innerHTML
+        let inner = el.replace('<h3>', '').replace('</h3>', '')
+        // below gets the id ready for list attribute target.
+        let pId = pri[i].getAttribute('id')
+        let node = document.createElement("li")
+        let att = document.createAttribute('class')
+        att.value = 'prizes'
+        let child = document.createElement('a')
+        let cAtt = document.createAttribute('href')
+        let styleAtt = document.createAttribute('style')
+        styleAtt.value = 'display: none'
+        cAtt.value = `#${pId}`
+        child.setAttributeNode(cAtt)
+        child.innerText = inner
+        node.setAttributeNode(att)
+        node.setAttributeNode(styleAtt)
+        node.appendChild(child)
+        list.appendChild(node)
+    }
+}
+
+function search_prizes() {
+    if (list.style.display == 'none'){
+        list.style.display = 'list-item'
+    }
+    let input = document.getElementById('searchbar').value 
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('prizes');
+    
+    for (i = 0; i < x.length; i++) {
+        if (x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display = "list-item";
+        }
+        else {
+            x[i].style.display = "none";
+        }
+    }
+    let div = document.getElementById('maincont');
+    div.onclick = remove_list;
+}
+
+bar.onchange = search_prizes;
+
+function remove_list(){
+    list.style.display = 'none'
+}
+
+window.onload = update_list()

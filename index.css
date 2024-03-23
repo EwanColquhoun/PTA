@@ -40,43 +40,113 @@ palate
 
 */
 
+/* header */
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 /* navigation */
 nav {
     text-align: center;
     line-height: 2.5rem;
 }
 
-nav a {
+nav .cat {
     text-decoration: none;
     margin: 1rem;
     font-size: large;
     border: 2px solid #75179b;
     padding: 0.3rem;
-    border-radius: 10%;
+    border-radius: 5px;
 }
 
-nav a:hover {
+nav .cat:hover {
+    width: 100%;
     color: whitesmoke;
     background-color: #75179b;
 }
 
-/* BTT button */
-#btt-arrow{
-    mix-blend-mode: difference;
-    color: antiquewhite;
+/* Search bar */
+#searchbar {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    display: block;
 }
+
+#list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.8);
+    left: 33%;
+    width: 34vw;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+#list a {
+    text-decoration: none;
+}
+ 
+.prizes {
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.prizes:hover  a {
+    width: 100%;
+    color: whitesmoke;
+    background-color: #75179b;
+}
+
+.prizes:hover {
+    color: whitesmoke;
+    background-color: #75179b;
+}
+ 
+.prizes:last-child {
+    border-bottom: none;
+}
+ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BTT button */
 
 .btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 70px;
-    right: 6vw
+    right: 6vw;
+    border: 1px solid grey;
+    box-shadow: 4px 4px 5px 1px #888888;
+    border-radius: 21px;
 }
 
 .btt-link {
     cursor: pointer;
     color: black;
+}
+
+.btt-link i {
+    font-size: x-large;
 }
 
 /* categories */
@@ -184,9 +254,35 @@ footer div {
   /* Small screens */
   @media all and (max-width: 500px) {
     .p-holder {
-      /* On small screens, we are no longer using row direction but column */
+      /* On small screens, no longer using row direction but column */
       flex-direction: column;
       max-width: 90vw;
+      padding: 0.25rem;
+    }
+
+    .cat {
+        display: none;
+    }
+
+    header > div img {
+        display: none;
+    }
+
+    h1 {
+        padding: unset;
+    }
+
+    h3 {
+        margin: 0.25rem auto;
+        font-size: medium;
+    }
+
+    #searchbar {
+        width: 80vw;
+    }
+
+    hr {
+        margin: 0.5rem auto;
     }
   }
 
