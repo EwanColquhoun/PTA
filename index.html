@@ -15,33 +15,35 @@
             <img src="assets/images/gen/currie-badge.jpg" alt="Currie PS logo" width="150" height="150">
             <h1>Currie PTA Silent Auction</h1>
         </div>
-        <hr>
-        <nav>
-            <div>
-                <!-- links to all sections -->
-                <a href="#home" class="cat">Home & Garden</a>
-                <a href="#beauty" class="cat">Beauty</a>
-                <a href="#holiday" class="cat">holiday</a>
-                <a href="#health" class="cat">Health</a>
-                <a href="#other" class="cat">Other</a>
-            </div>
-            <div>
-                <input id="searchbar" onkeyup="search_prizes()" type="search" autocomplete="off" placeholder="Search prizes here..">
-                <ul id='list'>
-                </ul>
-            </div>
-        </nav>
+        <div id="nav-holder">
+            <nav>
+                <hr>
+                <div>
+                    <!-- links to all sections -->
+                    <a href="#home" class="cat">Home & Garden</a>
+                    <a href="#beauty" class="cat">Beauty</a>
+                    <a href="#holiday" class="cat">holiday</a>
+                    <a href="#health" class="cat">Health</a>
+                    <a href="#other" class="cat">Other</a>
+                </div>
+                <div>
+                    <input id="searchbar" onkeyup="search_prizes()" type="search" autocomplete="off" placeholder="Search prizes here..">
+                    <ul id='list'>
+                    </ul>
+                </div>
+                <hr>
+            </nav>
+        </div>
     </header>
 
     <!-- Prizes -->
     <div id="maincont">
-        <hr>
         <h2 id="home">Home & Garden</h2>
         <div class="category">
             <div class="p-holder">
                 <div class="p-title" id="suntrap"><h3>Suntrap Signed Print</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/suntrap.png" alt="Suntrap image">
+                    <img src="assets/images/prizes/suntrap.png" alt="Suntrap image" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>A print from local artists based at Suntrap Garden.</p>
@@ -51,7 +53,7 @@
             <div class="p-holder">
                 <div class="p-title"><h3>Prize 1</h3></div>
                 <div class="p-image">
-                    <img src="/images/prizes/" alt="Prize image description">
+                    <img src="/images/prizes/" alt="Prize image description" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Prize descriptions...bla bla bla</p>
@@ -61,7 +63,7 @@
             <div class="p-holder">
                 <div id="WheeliecleanBinz" class="p-title"><h3>Wheelieclean Binz</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/wheelieclean.jpeg" alt="Wheelieclean Binz logo">
+                    <img src="assets/images/prizes/wheelieclean.jpeg" alt="Wheelieclean Binz logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Voucher for 5 x 1 Grey and 1 Green bin clean.</p>
@@ -71,7 +73,7 @@
             <div class="p-holder">
                 <div id="KiltedArtist" class="p-title"><h3>Kilted Artist</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/kiltedartist.png" alt="Kilted Artist logo">
+                    <img src="assets/images/prizes/kiltedartist.png" alt="Kilted Artist logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Painted Canvas</p>
@@ -81,7 +83,7 @@
             <div class="p-holder">
                 <div id="ColintonArts" class="p-title"><h3>Colinton Arts</h3></div>
                 <div class="p-image">
-                    <img src="https://www.colinton-arts.co.uk/wp-content/uploads/2021/09/Colinton-Arts-Master-Logo-Gold-Large-1-1024x369-270x96.png" alt="Kilted Artist logo">
+                    <img src="https://www.colinton-arts.co.uk/wp-content/uploads/2021/09/Colinton-Arts-Master-Logo-Gold-Large-1-1024x369-270x96.png" alt="Kilted Artist logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>A 35% off voucher at Colinton Arts Gallery and Framing</p>
@@ -95,7 +97,7 @@
             <div class="p-holder">
                 <div id="PamMillan" class="p-title"><h3>Pam Millan Studio Voucher</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/pammillan.png" alt="Pam Millan Shop logo">
+                    <img src="assets/images/prizes/pammillan.png" alt="Pam Millan Shop logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Pam Millan Boutique and Studio<br> £20 voucher.</p>
@@ -105,7 +107,7 @@
             <div class="p-holder">
                 <div id="EilidhJay" class="p-title"><h3>Eilidh Jay Beauty Therapy</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/eilidhjay.png" alt="Eilidh Jay image">
+                    <img src="assets/images/prizes/eilidhjay.png" alt="Eilidh Jay image" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Gift Voucher - Serene Skin Treatment </p>
@@ -115,7 +117,7 @@
             <div class="p-holder">
                 <div id="ExquisiteGlam" class="p-title" id="ExquisiteGlam"><h3>Exquisite Glam</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/exquisite.png" alt="Exquisite Glam image">
+                    <img src="assets/images/prizes/exquisite.png" alt="Exquisite Glam image" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Gift Voucher -3 services voucher</p>
@@ -125,7 +127,7 @@
             <div class="p-holder">
                 <div class="p-title"><h3>Prize 1</h3></div>
                 <div class="p-image">
-                    <img src="/images/prizes/" alt="Prize image description">
+                    <img src="/images/prizes/" alt="Prize image description" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Prize descriptions...bla bla bla</p>
@@ -183,7 +185,7 @@
             <div class="p-holder">
                 <div id="NataliaDuncanYoga" class="p-title"><h3>Natalia Duncan Yoga</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/ndyoga.jpg" alt="Natalia Duncan Yoga logo">
+                    <img src="assets/images/prizes/ndyoga.jpg" alt="Natalia Duncan Yoga logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>£25 - 30 min massage and 1 hour yoga class at hub @ 531</p>
@@ -193,7 +195,7 @@
             <div class="p-holder">
                 <div id="YogaHope" class="p-title"><h3>Yoga with Hope</h3></div>
                 <div class="p-image">
-                    <img src="/images/prizes/" alt="Yoga with Hope image">
+                    <img src="assets/images/prizes/yoga.png" alt="Yoga with Hope image" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>2 free yoga classes in Juniper Green with Esperanza Martin</p>
@@ -203,7 +205,7 @@
             <div class="p-holder">
                 <div class="p-title"><h3>Prize 1</h3></div>
                 <div class="p-image">
-                    <img src="/images/prizes/" alt="Prize image description">
+                    <img src="/images/prizes/" alt="Prize image description" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Prize descriptions...bla bla bla</p>
@@ -213,7 +215,7 @@
             <div class="p-holder">
                 <div class="p-title"><h3>Prize 1</h3></div>
                 <div class="p-image">
-                    <img src="/images/prizes/" alt="Prize image description">
+                    <img src="/images/prizes/" alt="Prize image description" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Prize descriptions...bla bla bla</p>
@@ -228,7 +230,7 @@
             <div class="p-holder">
                 <div id="WowDogs" class="p-title"><h3>Wow Dogs</h3></div>
                 <div class="p-image">
-                    <img src="https://lirp.cdn-website.com/8087733c/dms3rep/multi/opt/Original-80817c07-262w.png" alt="Wow Dogs logo">
+                    <img src="https://lirp.cdn-website.com/8087733c/dms3rep/multi/opt/Original-80817c07-262w.png" alt="Wow Dogs logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>1-2-1 session with WOW Dogs Training- 1 hour</p>
@@ -238,7 +240,7 @@
             <div class="p-holder">
                 <div id="RicBrannanPhotography" class="p-title"><h3>Ric Brannan Photography</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/ricbrannan.png" alt="Ric Brannan photography image">
+                    <img src="assets/images/prizes/ricbrannan.png" alt="Ric Brannan photography image" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>£120 Session Voucher</p>
@@ -248,7 +250,7 @@
             <div class="p-holder">
                 <div id="EatYourHeartOut" class="p-title"><h3>Eat Your Heart Out - Cakes</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/eyhocakes.png" alt="Eat Your Heart Out logo">
+                    <img src="assets/images/prizes/eyhocakes.png" alt="Eat Your Heart Out logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>Voucher for a cupcake/cake</p>
@@ -258,7 +260,7 @@
             <div class="p-holder">
                 <div id="SergiosFrySlateford" class="p-title"><h3>Sergios Fry Slateford</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/sergio.png" alt="Sergios Fry Slateford logo">
+                    <img src="assets/images/prizes/sergio.png" alt="Sergios Fry Slateford logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>A dinner for two voucher.</p>
@@ -268,7 +270,7 @@
             <div class="p-holder">
                 <div id="WorldofBowling" class="p-title"><h3>World of Bowling</h3></div>
                 <div class="p-image">
-                    <img src="assets/images/prizes/wobowling.png" alt="World of Bowling logo">
+                    <img src="assets/images/prizes/wobowling.png" alt="World of Bowling logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>50% off bowling and 50% off Marco's pool hall vouchers.</p>
@@ -278,7 +280,7 @@
             <div class="p-holder">
                 <div id="JumpIn" class="p-title"><h3>Jump In</h3></div>
                 <div class="p-image">
-                    <img src="https://gojumpin.com/wp-content/uploads/2023/06/jumpin-logo.png" alt="Jump In logo">
+                    <img src="https://gojumpin.com/wp-content/uploads/2023/06/jumpin-logo.png" alt="Jump In logo" width="250" height="250">
                 </div>
                 <div class="p-desc">
                     <p>2 x £14.50 gift vouchers</p>
