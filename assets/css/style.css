@@ -7,8 +7,8 @@
 
 body {
     /* background-image: linear-gradient(to right, #916e9c, #a584ae, #ba9ac0, #ceb1d2, #e3c8e5, #e1ceee, #ded4f7, #dadbfe, #b5d4f8, #8ecdea, #6dc4d1, #5ebab0); */
-    background-color: antiquewhite;
-    width: 70vw;
+    background-color: whitesmoke;
+    /* width: 70vw; */
     margin: auto;
 }
 
@@ -32,21 +32,8 @@ hr {
     margin: 2rem auto;
 }
 
-/* 
-palate
-#916E9C purp
-#FFE8FF pink
-#5EBAB0 green
-#FFFADE beige
-
-*/
 
 /* header */
-header {
-    overflow: hidden;
-    /* align-items: flex-start */
-}
-
 header > div {
     display: flex;
     align-items: center;
@@ -66,7 +53,7 @@ header > div {
 
 nav .cat {
     text-decoration: none;
-    margin: 1rem;
+    margin: 0.5rem;
     font-size: large;
     border: 2px solid #75179b;
     padding: 0.3rem;
@@ -82,6 +69,8 @@ nav .cat:hover {
 
 #maincont {
     position: relative;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Search bar */
@@ -103,9 +92,9 @@ nav .cat:hover {
     background-color: rgba(245, 245, 245, 0.8);
     max-height: 50vh;
     overflow: auto;
-    left: calc(50% -(var(--width) / 2));
-    --width: 50%;
-    width: 50%;
+    left: calc(50% - (var(--width) / 2));
+    --width: 40%;
+    width: 40%;
 }
 
 #list a {
@@ -273,6 +262,20 @@ form #consent {
     color: whitesmoke;
 }
 
+#form-modal {
+    margin: auto;
+    display: none;
+    background-color: lightblue;
+    border: 2px solid lightslategrey;
+    border-radius: 5px;
+    position: fixed;
+    top: 20vh;
+    left: calc(50% - (var(--width) / 2));
+    --width: 70%;
+    width: 70%;
+    height: 50vh;
+}
+
 /* footer */
 footer div {
     text-align: center;
@@ -294,6 +297,11 @@ footer div {
   
   /* Small screens */
   @media all and (max-width: 500px) {
+
+    #maincont {
+        width: 90%;
+    }
+
     .p-holder {
       /* On small screens, no longer using row direction but column */
       flex-direction: column;
@@ -324,6 +332,7 @@ footer div {
 
     #list {
         width: 80vw;
+        --width: 80vw;
     }
 
     hr {

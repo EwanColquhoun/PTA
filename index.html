@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Currie PTA</title>
 </head>
-<body>
 
+<body>
     <!-- navigation -->
     <header id="header">
         <div>
@@ -49,16 +49,6 @@
                 <div class="p-desc">
                     <p>A print from local artists based at Suntrap Garden.</p>
                     <a class="bid-link" href="#bid-form" data-prize-name="Suntrap-Print">Bid now!</a>
-                </div>
-            </div>
-            <div class="p-holder">
-                <div class="p-title"><h3>Prize 1</h3></div>
-                <div class="p-image">
-                    <img src="/images/prizes/" alt="Prize image description" width="250" height="250">
-                </div>
-                <div class="p-desc">
-                    <p>Prize descriptions...bla bla bla</p>
-                    <a class="bid-link" href="#bid-form">Bid now!</a>
                 </div>
             </div>
             <div class="p-holder">
@@ -359,6 +349,20 @@
     </div>
     <hr>
 
+    <!-- Form conf modal -->
+
+    <div id="form-modal">
+        <div id="modal-header">
+            <h2>Submit</h2>
+        </div>
+        <div id="modal-body">
+        </div>
+        <div>
+            <button id="modal-cancel">Cancel</button>
+            <button id="modal-submit">BID</button>
+        </div>
+    </div>
+
     <!-- bidding form -->
     <h2>Bidding Form</h2>
     <div id="form-holder">
@@ -375,11 +379,26 @@
             <input type="text" name="Prize" id="p-search" required placeholder="Click on the indiviual prize 'Bid now!' button to populate this box.">
             <br>
             <label for="amount">Amount (£):</label>
-            <input name="Bid" id="amount" type="number" required>
+            <input name="Bid" id="amount" type="number" required placeholder="£0 bids will be disregarded!">
             <br>
             <label for="consent">Do you consent to CurriePTA using this data for the May Fayre 2024?<input name="consent" id="consent" type="checkbox" required></label>
-            <button id="submit" type="submit">Submit</button>
+            <button id="submit">Submit</button>
             <a href="#" id="previous">Return to prizes</a>
+
+            <!-- Form confirm modal -->
+
+            <div id="form-modal">
+                <div id="modal-header">
+                    <h2>Submit</h2>
+                </div>
+                <div id="modal-body">
+                </div>
+                <div>
+                    <button id="modal-cancel">Cancel</button>
+                    <button id="modal-submit" type="submit">BID</button>
+                </div>
+            </div>
+
         </form>
         <!-- iframe to hide the gsheets status -->
         <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe>

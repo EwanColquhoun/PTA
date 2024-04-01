@@ -75,27 +75,77 @@ function validateForm() {
         return false;
     } else if (a == "") {
         return false;
+    } else if (z == "") {
+        return false;
     } else {
         return true;
     }
 };
 
-// submit, feedback.
-subBut.addEventListener('click', function(){
-    let pName = document.forms["bid-form"]["name"].value
+// Prevents submit and shows modal for confirmation
+let modal = document.getElementById('form-modal')
+let modalBody = document.getElementById('modal-body')
+function preventSubmit(event){
+
+    let names = document.forms["bid-form"]["name"].value;
+    let prize = document.forms["bid-form"]["p-search"].value;
+    let bid = document.forms["bid-form"]["amount"].value;
+
     let valid = validateForm();
     let state = dataConsent();
 
     if (valid == true){
         if (state){
-            alert(`Hi ${pName}, thank you for your bid. Good luck!`);
-            setTimeout(() => {
-                form.reset(), 2000});
-            } else {
-                alert(`You must consent if you would like to win!`)
-            }
-    } 
-});
+            modal.style.display = "block"
+
+            let content = `
+                Hi ${names}, <br> 
+                    You are bidding £${bid} for ${prize}.  
+            `
+            modalBody.innerHTML = content
+            event.preventDefault();
+        } else {
+            alert(`You must consent if you would like to win!`)
+        }
+    }
+}
+
+// Allows modal to send form
+function modalSend(){
+    let form = document.forms["bid-form"]
+    form.requestSubmit();
+    console.log('sent')
+    modal.style.display = 'none'
+    setTimeout(() => {form.reset(), 2000});
+}
+
+// hides modal with cancel button
+function modalHide() {
+    modal.style.display = "none"
+}
+
+let mSubmit = document.getElementById('modal-submit')
+let mCancel = document.getElementById('modal-cancel')
+subBut.addEventListener('click', preventSubmit)
+mSubmit.addEventListener('click', modalSend)
+mCancel.addEventListener('click', modalHide)
+
+// submit, feedback.
+// subBut.addEventListener('click', function(){
+//     let pName = document.forms["bid-form"]["name"].value
+//     let valid = validateForm();
+//     let state = dataConsent();
+
+//     if (valid == true){
+//         if (state){
+//             alert(`Hi ${pName}, thank you for your bid. Good luck!`);
+//             setTimeout(() => {
+//                 form.reset(), 2000});
+//             } else {
+//                 alert(`You must consent if you would like to win!`)
+//             }
+//     } 
+// });
 
 // disables submit button after the deadline
 function finishAuction() {
@@ -160,7 +210,8 @@ function search_prizes() {
             x[i].style.display = "none";
         }
     }
-    let div = document.getElementById('maincont');
+    let div = document.getElementsByTagName('body')[0];
+    // let div = document.getElementById('maincont');
     div.onclick = remove_list;
 }
 
