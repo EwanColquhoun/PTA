@@ -220,10 +220,28 @@ function remove_list(){
     list.style.display = 'none'
 }
 
+function remove_nav(){
+    if (miniNav.classList.contains('show')){
+        miniNav.classList.remove('show')
+    }
+}
+
+// Activates the mobile nav links
+let main = document.getElementById('maincont');
 let burger = document.getElementById('burger')
 let miniNav = document.getElementById('mini-nav')
-
 burger.addEventListener('click', function(){
     miniNav.classList.toggle('show')
 })
+
+function check_size(){
+    if (burger.style.display = 'none'){
+        remove_nav;
+    }
+}
+
+main.onclick = remove_nav;
+bar.onclick = remove_nav;
+miniNav.onclick = remove_nav;
 window.DOMContentLoaded = update_list()
+window.DOMContentLoaded = check_size;

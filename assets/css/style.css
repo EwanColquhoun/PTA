@@ -66,6 +66,7 @@ header > div {
     padding: 0.3rem;
     border-radius: 5px;
     color: #75179b;
+    display: ruby;
 }
 
 #mini-nav {
@@ -73,8 +74,8 @@ header > div {
     list-style: none;
     float: right;
     padding: 0;
-    right: 23%;
-    top: -7%;
+    right: 17%;
+    top: -8%;
     border: 2px solid purple;
     border-radius: 5px;
     position: absolute;
@@ -89,6 +90,13 @@ header > div {
 
 #nav-small a {
     color: whitesmoke;
+    width: 100%;
+    display: block;
+}
+
+#nav-small a:hover {
+    background-color: whitesmoke;
+    color: #75179b;
 }
 
 #nav-small span {
@@ -96,6 +104,10 @@ header > div {
     width: 20%;
     margin: 10px auto;
     text-align: right;
+}
+
+#burger i {
+    font-size: x-large;
 }
 
 nav .cat:hover {
@@ -356,9 +368,16 @@ footer div {
     }
   }
   
+
+@media only screen and (min-width : 500px){
+    .hidden {
+        display: none !important;
+    }
+
+}
+
   /* Small screens */
   @media all and (max-width: 500px) {
-
     #maincont {
         width: 90%;
     }
