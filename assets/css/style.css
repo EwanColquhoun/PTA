@@ -99,6 +99,7 @@ nav .cat:hover {
 
 #list a {
     text-decoration: none;
+    color: unset;
 }
  
 .prizes {
@@ -108,7 +109,7 @@ nav .cat:hover {
     color: #75179b;
 }
 
-.prizes:hover  a {
+.prizes:hover #list a {
     width: 100%;
     color: whitesmoke;
     background-color: #75179b;
@@ -222,7 +223,8 @@ nav .cat:hover {
     padding: 2rem;
     border: 2px solid grey;
     border-radius: 5px;
-    min-width: 80%;
+    width: 70%;
+    margin: 0 auto;
     background-color: rgba(255, 250, 222, 0.3);
     box-shadow: 4px 4px 5px 1px #888888;
 }
@@ -274,6 +276,27 @@ form #consent {
     --width: 70%;
     width: 70%;
     height: 50vh;
+    text-align: center;
+}
+
+#form-modal div {
+    padding: 10px;
+}
+
+#modal-submit {
+    margin: 20px;
+    background-color: limegreen;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+#modal-cancel {
+    float: inline-start;
+    color: lightcoral;
+    border-radius: 5px;
+    height: 20px;
+    width: 40px;
 }
 
 /* footer */
