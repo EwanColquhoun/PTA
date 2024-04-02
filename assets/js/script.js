@@ -211,7 +211,6 @@ function search_prizes() {
         }
     }
     let div = document.getElementsByTagName('body')[0];
-    // let div = document.getElementById('maincont');
     div.onclick = remove_list;
 }
 
@@ -221,4 +220,10 @@ function remove_list(){
     list.style.display = 'none'
 }
 
+let burger = document.getElementById('burger')
+let miniNav = document.getElementById('mini-nav')
+
+burger.addEventListener('click', function(){
+    miniNav.classList.toggle('show')
+})
 window.DOMContentLoaded = update_list()

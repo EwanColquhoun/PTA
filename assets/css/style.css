@@ -32,6 +32,13 @@ hr {
     margin: 2rem auto;
 }
 
+a {
+    text-decoration: none;
+}
+
+.show {
+    display: block !important;
+}
 
 /* header */
 header > div {
@@ -51,7 +58,7 @@ header > div {
     z-index: 100;
 }
 
-nav .cat {
+.cat {
     text-decoration: none;
     margin: 0.5rem;
     font-size: large;
@@ -59,6 +66,36 @@ nav .cat {
     padding: 0.3rem;
     border-radius: 5px;
     color: #75179b;
+}
+
+#mini-nav {
+    display: none;
+    list-style: none;
+    float: right;
+    padding: 0;
+    right: 23%;
+    top: -7%;
+    border: 2px solid purple;
+    border-radius: 5px;
+    position: absolute;
+    background-color: antiquewhite;
+    width: 160px;
+    z-index: 300;
+}
+
+#nav-small li {
+    background-color: #75179b;
+}
+
+#nav-small a {
+    color: whitesmoke;
+}
+
+#nav-small span {
+    display: none;
+    width: 20%;
+    margin: 10px auto;
+    text-align: right;
 }
 
 nav .cat:hover {
@@ -82,6 +119,7 @@ nav .cat:hover {
     box-sizing: border-box;
     display: block;
     border: 2px solid #75179b;
+    position: relative;
 }
 
 #list {
@@ -92,6 +130,7 @@ nav .cat:hover {
     background-color: rgba(245, 245, 245, 0.8);
     max-height: 50vh;
     overflow: auto;
+    top: 73%;
     left: calc(50% - (var(--width) / 2));
     --width: 40%;
     width: 40%;
@@ -202,7 +241,6 @@ nav .cat:hover {
     background-color: rgba(255, 250, 222, 0.3);
     border-radius: 5px;
     box-shadow: 4px 4px 5px 1px #888888;
-    overflow: auto;
 }
 
 .p-holder p {
@@ -325,6 +363,19 @@ footer div {
         width: 90%;
     }
 
+    #nav-holder nav {
+        width: 90%;
+    }
+
+    .small-hr {
+        display: none;
+    }
+
+    hr {
+        width: 100%;
+        margin: 0;
+    }
+
     .p-holder {
       /* On small screens, no longer using row direction but column */
       flex-direction: column;
@@ -336,12 +387,18 @@ footer div {
         display: none;
     }
 
+    #nav-small span {
+        float: right;
+        display: block;
+    }
+
     header > div img {
         display: none;
     }
 
     h1 {
         padding: unset;
+        margin-bottom: 0;
     }
 
     h3 {
@@ -350,7 +407,8 @@ footer div {
     }
 
     #searchbar {
-        width: 80vw;
+        width: 80%;
+        float: left;
     }
 
     #list {
