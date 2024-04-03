@@ -99,9 +99,12 @@ function preventSubmit(event){
             modal.style.display = "block"
 
             let content = `
-                Hi ${names}, <br> 
-                    You are bidding £${bid} for ${prize}.  
-            `
+            <div>
+                Hi <span class="info">${names}</span>, <br> 
+                    You are bidding <span class="info">£${bid}</span> for <span class="info">${prize}</span>.  
+            </div>
+                    `
+            modalBody.classList.add('slant')
             modalBody.innerHTML = content
             event.preventDefault();
         } else {
@@ -121,6 +124,7 @@ function modalSend(){
 
 // hides modal with cancel button
 function modalHide() {
+    console.log('hide modal')
     modal.style.display = "none"
 }
 
@@ -234,14 +238,8 @@ burger.addEventListener('click', function(){
     miniNav.classList.toggle('show')
 })
 
-function check_size(){
-    if (burger.style.display = 'none'){
-        remove_nav;
-    }
-}
-
 main.onclick = remove_nav;
+main.onclick = modalHide;
 bar.onclick = remove_nav;
 miniNav.onclick = remove_nav;
-window.DOMContentLoaded = update_list()
-window.DOMContentLoaded = check_size;
+window.DOMContentLoaded = update_list;

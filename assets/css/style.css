@@ -121,7 +121,7 @@ header > div {
 }
 
 nav .cat:hover {
-    width: 100%;
+    /* width: 100%; */
     color: whitesmoke;
     background-color: #75179b;
 }
@@ -302,7 +302,7 @@ nav .cat:hover {
     padding: 2rem;
     border: 2px solid grey;
     border-radius: 5px;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     background-color: rgba(255, 250, 222, 0.3);
     box-shadow: 4px 4px 5px 1px #888888;
@@ -343,11 +343,13 @@ form #consent {
     color: whitesmoke;
 }
 
+
+/* form-modal */
 #form-modal {
     margin: auto;
-    display: none;
-    background-color: lightblue;
-    border: 2px solid lightslategrey;
+    display: none; /* FOR TESTING otherwise 'none' */
+    background-color: whitesmoke;
+    border: 10px solid #75179b;
     border-radius: 5px;
     position: fixed;
     top: 20vh;
@@ -358,24 +360,78 @@ form #consent {
     text-align: center;
 }
 
+.slant {
+    --a: 3deg; /* control the angle (it should be small) */
+    
+    border-image: conic-gradient(#75179b 0 0) fill 0//999px 100;
+    clip-path: 
+      polygon(
+        -9999px calc(tan(var(--a)) * 9999px),
+        9999px calc(tan(var(--a)) * -9999px),
+        calc(100% + 9999px) calc(100% - tan(var(--a)) * 9999px),
+        calc(100% - 9999px) calc(100% + tan(var(--a)) * 9999px)
+      );
+}
+  
 #form-modal div {
-    padding: 10px;
+    padding: 5px;
+    margin: 10px auto;
+}
+
+#modal-body {
+    height: 100px;
+    color: whitesmoke;
+}
+
+.info {
+    font-size: larger;
+    font-style: italic;
+    color: antiquewhite;
+}
+
+#modal-but {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
 }
 
 #modal-submit {
+    font-weight: 500;
+    font-size: larger;
     margin: 20px;
-    background-color: limegreen;
+    background-color: rgb(50, 120, 50);
     height: 40px;
     width: 80px;
     border-radius: 5px;
+    color: whitesmoke;
+    border: 2px solid rgb(50, 120, 50);
+}
+
+#modal-submit:hover {
+    background-color: whitesmoke;
+    color: rgb(50, 120, 50);
+    transform: scale(1.2);
 }
 
 #modal-cancel {
+    font-size: larger;
     float: inline-start;
-    color: lightcoral;
+    color: whitesmoke;
     border-radius: 5px;
-    height: 20px;
-    width: 40px;
+    height: 30px;
+    background-color: palevioletred;
+    width: 30px;
+    margin: 15px;
+    border: 2px solid palevioletred;
+}
+
+#modal-cancel:hover {
+    color: palevioletred;
+    background-color: whitesmoke;
+    transform: scale(1.2);
 }
 
 /* footer */

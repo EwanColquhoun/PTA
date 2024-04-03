@@ -404,9 +404,9 @@
             <input type="text" name="Prize" id="p-search" required placeholder="Click on the indiviual prize 'Bid now!' button to populate this box.">
             <br>
             <label for="amount">Amount (£):</label>
-            <input name="Bid" id="amount" type="number" required placeholder="£0 bids will be disregarded!">
+            <input name="Bid" id="amount" type="number" required placeholder="Min bid is £1, no max.">
             <br>
-            <label for="consent">Do you consent to CurriePTA using this data for the May Fayre 2024?<input name="consent" id="consent" type="checkbox" required></label>
+            <label for="consent">Do you consent to Currie PTA using this data for the May Fayre 2024?<input name="consent" id="consent" type="checkbox" required></label>
             <button id="submit">Submit</button>
             <a href="#" id="previous">Return to prizes</a>
 
@@ -414,12 +414,11 @@
 
             <div id="form-modal">
                 <div id="modal-header">
-                    <h2>Submit</h2>
+                    <h2>Bid Confirmation</h2>
                 </div>
-                <div id="modal-body">
-                </div>
-                <div>
-                    <button id="modal-cancel">Cancel</button>
+                <div id="modal-body"></div>
+                <div id="modal-but">
+                    <button id="modal-cancel"><i class="fa-solid fa-xmark"></i></button>
                     <button id="modal-submit" type="submit">BID</button>
                 </div>
             </div>
@@ -443,7 +442,7 @@
 
     <footer>
         <div>
-            <p>E.Colquhoun 2024</p>
+            <p>AusfugDevServices 2024</p>
         </div>
     </footer>
 
