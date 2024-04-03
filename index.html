@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/48b20a3378.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link prefetch rel="stylesheet" href="assets/css/style.css">
     <title>Currie PTA</title>
 </head>
 
@@ -378,12 +378,12 @@
 
     <div id="form-modal">
         <div id="modal-header">
-            <h2>Submit</h2>
+            <h2>Bid Confirmation</h2>
         </div>
-        <div id="modal-body">
+        <div id="modal-body" class="slant">
         </div>
-        <div id="modal-buttons">
-            <button id="modal-cancel">Cancel</button>
+        <div id="modal-but">
+            <button id="modal-cancel"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
             <button id="modal-submit">BID</button>
         </div>
     </div>
@@ -413,14 +413,19 @@
             <!-- Form confirm modal -->
 
             <div id="form-modal">
-                <div id="modal-header">
+                <!-- <div id="modal-header">
                     <h2>Bid Confirmation</h2>
                 </div>
-                <div id="modal-body"></div>
+                <div id="modal-body" class="slant">
+                    <div>
+                        Hi <span class="info">${names}</span>, <br> 
+                            You are bidding <span class="info">£${bid}</span> for <span class="info">${prize}</span>.  
+                    </div>
+                </div>
                 <div id="modal-but">
                     <button id="modal-cancel"><i class="fa-solid fa-xmark"></i></button>
                     <button id="modal-submit" type="submit">BID</button>
-                </div>
+                </div> -->
             </div>
 
         </form>
@@ -429,7 +434,6 @@
 
         <!-- todo -->
         <!-- Inset prize details -->
-        <!-- Have header and category titles fixed top -->
 
     </div>
 
@@ -442,7 +446,7 @@
 
     <footer>
         <div>
-            <p>AusfugDevServices 2024</p>
+            <p>© AusfugDevServices 2024</p>
         </div>
     </footer>
 

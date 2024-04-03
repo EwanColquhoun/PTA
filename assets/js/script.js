@@ -1,5 +1,7 @@
 // Back to top button
 let btt = document.getElementById('back-to-top');
+let main = document.getElementById('maincont');
+
 
 btt.addEventListener('click', function(){
     window.scrollTo(0,0);
@@ -104,13 +106,35 @@ function preventSubmit(event){
                     You are bidding <span class="info">£${bid}</span> for <span class="info">${prize}</span>.  
             </div>
                     `
-            modalBody.classList.add('slant')
+            // modalBody.classList.add('slant')
             modalBody.innerHTML = content
             event.preventDefault();
         } else {
             alert(`You must consent if you would like to win!`)
         }
     }
+
+    //     if (valid == true){
+    //     if (state){
+    //         modal.style.display = "block"
+
+    //         let content =+ `
+    //         <div id="modal-header">
+    //             <h2>Bid Confirmation</h2>
+    //         </div>
+    //         <div id="modal-body" class="slant">
+    //             <div>
+    //                 Hi <span class="info">${names}</span>, <br> 
+    //                     You are bidding <span class="info">£${bid}</span> for <span class="info">${prize}</span>.  
+    //             </div>
+    //         </div>
+    //                 `
+    //         modal.innerHTML = content
+    //         event.preventDefault();
+    //     } else {
+    //         alert(`You must consent if you would like to win!`)
+    //     }
+    // }
 }
 
 // Allows modal to send form
@@ -124,7 +148,6 @@ function modalSend(){
 
 // hides modal with cancel button
 function modalHide() {
-    console.log('hide modal')
     modal.style.display = "none"
 }
 
@@ -133,6 +156,7 @@ let mCancel = document.getElementById('modal-cancel')
 subBut.addEventListener('click', preventSubmit)
 mSubmit.addEventListener('click', modalSend)
 mCancel.addEventListener('click', modalHide)
+main.addEventListener('click', modalHide) //needs to be body
 
 // submit, feedback.
 // subBut.addEventListener('click', function(){
@@ -218,8 +242,6 @@ function search_prizes() {
     div.onclick = remove_list;
 }
 
-bar.onchange = search_prizes;
-
 function remove_list(){
     list.style.display = 'none'
 }
@@ -231,7 +253,7 @@ function remove_nav(){
 }
 
 // Activates the mobile nav links
-let main = document.getElementById('maincont');
+// let main = document.getElementById('maincont');
 let burger = document.getElementById('burger')
 let miniNav = document.getElementById('mini-nav')
 burger.addEventListener('click', function(){
@@ -239,7 +261,8 @@ burger.addEventListener('click', function(){
 })
 
 main.onclick = remove_nav;
-main.onclick = modalHide;
+main.onclick = modalHide; //not sure this works
+bar.onchange = search_prizes;
 bar.onclick = remove_nav;
 miniNav.onclick = remove_nav;
-window.DOMContentLoaded = update_list;
+window.DOMContentLoaded = update_list();
