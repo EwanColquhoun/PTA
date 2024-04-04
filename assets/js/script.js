@@ -75,6 +75,8 @@ function validateForm() {
       return false;
     } else if (y == "") {
         return false;
+    } else if (!y.includes('@')) {
+        return false;
     } else if (a == "") {
         return false;
     } else if (z == "") {
@@ -113,37 +115,30 @@ function preventSubmit(event){
             alert(`You must consent if you would like to win!`)
         }
     }
-
-    //     if (valid == true){
-    //     if (state){
-    //         modal.style.display = "block"
-
-    //         let content =+ `
-    //         <div id="modal-header">
-    //             <h2>Bid Confirmation</h2>
-    //         </div>
-    //         <div id="modal-body" class="slant">
-    //             <div>
-    //                 Hi <span class="info">${names}</span>, <br> 
-    //                     You are bidding <span class="info">£${bid}</span> for <span class="info">${prize}</span>.  
-    //             </div>
-    //         </div>
-    //                 `
-    //         modal.innerHTML = content
-    //         event.preventDefault();
-    //     } else {
-    //         alert(`You must consent if you would like to win!`)
-    //     }
-    // }
 }
 
 // Allows modal to send form
+// display overlay and spinner
+// timeout the remove spinner and display tick
+// timeout then remove modal 
 function modalSend(){
     let form = document.forms["bid-form"]
     form.requestSubmit();
-    console.log('sent')
-    modal.style.display = 'none'
+    modal.style.display = 'none',
     setTimeout(() => {form.reset(), 2000});
+}
+
+function overlay(){
+    let overlay = document.getElementById('overlay')
+    let spinner = document.getElementById('spin')
+    let check = document.getElementById('check')
+
+    overlay.classList.add('show')
+    spinner.classList.add('show')
+    setTimeout(() => {
+        spinner.classList.replace('show', 'hide')
+        check.classList.add('show')
+    }, 2000)
 }
 
 // hides modal with cancel button
@@ -154,26 +149,12 @@ function modalHide() {
 let mSubmit = document.getElementById('modal-submit')
 let mCancel = document.getElementById('modal-cancel')
 subBut.addEventListener('click', preventSubmit)
-mSubmit.addEventListener('click', modalSend)
+
+mSubmit.addEventListener('click', overlay)
+mSubmit.addEventListener('click', () => {
+    setTimeout(modalSend, 4000)})
 mCancel.addEventListener('click', modalHide)
 main.addEventListener('click', modalHide) //needs to be body
-
-// submit, feedback.
-// subBut.addEventListener('click', function(){
-//     let pName = document.forms["bid-form"]["name"].value
-//     let valid = validateForm();
-//     let state = dataConsent();
-
-//     if (valid == true){
-//         if (state){
-//             alert(`Hi ${pName}, thank you for your bid. Good luck!`);
-//             setTimeout(() => {
-//                 form.reset(), 2000});
-//             } else {
-//                 alert(`You must consent if you would like to win!`)
-//             }
-//     } 
-// });
 
 // disables submit button after the deadline
 function finishAuction() {
