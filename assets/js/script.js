@@ -118,9 +118,6 @@ function preventSubmit(event){
 }
 
 // Allows modal to send form
-// display overlay and spinner
-// timeout the remove spinner and display tick
-// timeout then remove modal 
 function modalSend(){
     let form = document.forms["bid-form"]
     form.requestSubmit();
@@ -128,33 +125,48 @@ function modalSend(){
     setTimeout(() => {form.reset(), 2000});
 }
 
-function overlay(){
-    let overlay = document.getElementById('overlay')
-    let spinner = document.getElementById('spin')
-    let check = document.getElementById('check')
-
-    overlay.classList.add('show')
-    spinner.classList.add('show')
-    setTimeout(() => {
-        spinner.classList.replace('show', 'hide')
-        check.classList.add('show')
-    }, 2000)
+let overlayEl = document.getElementById('overlay')
+let spinner = document.getElementById('spin')
+let check = document.getElementById('check')
+// hides modal with cancel button
+function modalReset() {
+    modal.style.display = "none"
+    spinner.classList.replace('show', 'hide')
+    check.classList.replace('show', 'hide')
+    overlayEl.classList.replace('show', 'hide')
 }
 
-// hides modal with cancel button
-function modalHide() {
-    modal.style.display = "none"
+function overlay(){
+    if (overlayEl.classList.contains('hide')){
+        overlayEl.classList.replace('hide', 'show')
+    } else {
+        overlayEl.classList.add('show')
+    }
+    if (spinner.classList.contains('hide')){
+        spinner.classList.replace('hide', 'show')
+    } else {
+        spinner.classList.add('show')
+    }
+    setTimeout(() => {
+        spinner.classList.replace('show', 'hide')
+        if (check.classList.contains('hide')){
+            check.classList.replace('hide', 'show')
+        } else {
+            check.classList.add('show')
+        }    }, 1000)
+    console.log('sending...')
+    setTimeout(modalSend, 4000);
+    setTimeout(modalReset, 4500);
 }
 
 let mSubmit = document.getElementById('modal-submit')
 let mCancel = document.getElementById('modal-cancel')
 subBut.addEventListener('click', preventSubmit)
-
 mSubmit.addEventListener('click', overlay)
-mSubmit.addEventListener('click', () => {
-    setTimeout(modalSend, 4000)})
-mCancel.addEventListener('click', modalHide)
-main.addEventListener('click', modalHide) //needs to be body
+// mSubmit.addEventListener('click', () => {
+//     setTimeout(modalSend, 4000)})
+mCancel.addEventListener('click', modalReset)
+main.addEventListener('click', modalReset) //needs to be body
 
 // disables submit button after the deadline
 function finishAuction() {
@@ -242,7 +254,7 @@ burger.addEventListener('click', function(){
 })
 
 main.onclick = remove_nav;
-main.onclick = modalHide; //not sure this works
+main.onclick = modalReset; //not sure this works
 bar.onchange = search_prizes;
 bar.onclick = remove_nav;
 miniNav.onclick = remove_nav;
