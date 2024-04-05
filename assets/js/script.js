@@ -155,8 +155,8 @@ function overlay(){
             check.classList.add('show')
         }    }, 1000)
     console.log('sending...')
-    setTimeout(modalSend, 4000);
-    setTimeout(modalReset, 4500);
+    setTimeout(modalSend, 2500);
+    setTimeout(modalReset, 3000);
 }
 
 let mSubmit = document.getElementById('modal-submit')

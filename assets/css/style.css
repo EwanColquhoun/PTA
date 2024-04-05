@@ -212,6 +212,7 @@ nav .cat:hover {
 #blurb ul {
     list-style-type: none;
     padding: unset;
+    line-height: 1.5;
 }
 
 #blurb span {
@@ -392,9 +393,10 @@ form #consent {
 }
 
 #modal-body {
-    height: 100px;
+    height: 150px;
     color: whitesmoke;
     padding: 20px;
+    margin-top: 2rem;
 }
 
 .info {
@@ -405,11 +407,11 @@ form #consent {
 
 #modal-but {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     width: 100%;
-    bottom: 0%;
+    bottom: 4%;
 }
 
 #modal-submit {
