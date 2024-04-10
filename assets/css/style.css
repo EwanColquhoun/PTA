@@ -157,13 +157,14 @@ nav .cat:hover {
     padding: 0;
     margin: 0;
     position: absolute;
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(245, 245, 245, 0.95);
     max-height: 50vh;
     overflow: auto;
-    top: 73%;
+    top: 43%;
     left: calc(50% - (var(--width) / 2));
-    --width: 40%;
-    width: 40%;
+    --width: 50%;
+    width: 50%;
+    z-index: 600;
 }
 
 #list a {
@@ -173,10 +174,11 @@ nav .cat:hover {
  
 .prizes {
     font-size: 1.2em;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     animation: fadeIn 0.5s ease-in-out;
     color: #75179b;
     line-height: 2.3rem;
+    text-align: center;
 }
 
 .prizes:hover #list a {
