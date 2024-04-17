@@ -84,7 +84,8 @@ header > div {
     float: right;
     padding: 0;
     right: 17%;
-    top: -8%;
+    top: 9rem;
+    text-align: center;
     border: 2px solid purple;
     border-radius: 5px;
     position: absolute;
@@ -226,6 +227,11 @@ nav .cat:hover {
     margin: 0 auto;
     font-style: italic;
     font-weight: 700;
+}
+
+.purple {
+    color: #75179b;
+    font-weight: bold;
 }
 
 /* BTT button */
@@ -544,6 +550,7 @@ footer a {
     #list {
         width: 80vw;
         --width: 80vw;
+        top: 10rem;
     }
 
     hr {
