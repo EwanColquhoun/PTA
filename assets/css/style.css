@@ -161,7 +161,7 @@ nav .cat:hover {
     background-color: rgba(245, 245, 245, 0.95);
     max-height: 50vh;
     overflow: auto;
-    top: 43%;
+    top: 21rem;
     left: calc(50% - (var(--width) / 2));
     --width: 50%;
     width: 50%;
@@ -231,7 +231,11 @@ nav .cat:hover {
 
 .purple {
     color: #75179b;
-    font-weight: bold;
+    font-weight: 500;
+}
+
+.emaillink {
+    text-decoration: none;
 }
 
 /* BTT button */
