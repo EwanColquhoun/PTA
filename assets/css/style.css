@@ -26,7 +26,7 @@ h3 {
 }
 
 hr {
-    background-color: #75179b;
+    background-color: rgb(117, 23, 155);
     width: 70vw;
     height: 5px;
     border-radius: 5px;
@@ -138,7 +138,7 @@ nav .cat:hover {
 
 /* Search bar */
 #search-div {
-    margin: 1rem 6px;
+    margin: 1rem 0 1rem 0;
 }
 
 #searchbar {
