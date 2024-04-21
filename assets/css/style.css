@@ -64,7 +64,7 @@ header > div {
 
 #nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .cat {
@@ -563,6 +563,10 @@ footer a {
 
     #blurb {
         padding-top: 2.5rem;
+    }
+
+    footer a {
+        display: block;
     }
   }
 
