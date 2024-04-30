@@ -181,8 +181,8 @@ let offsetMillis = timeAtFinish - timeNow;
 if (Math.sign(offsetMillis) == '-1'){
     setTimeout(finishAuction, offsetMillis);
 } else {
-    console.log(timeAtFinish, timeNow, offsetMillis)
-    console.log('timing error')
+    // console.log(timeAtFinish, timeNow, offsetMillis)
+    // console.log('timing error')
 }
 
 // Search Bar
