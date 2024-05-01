@@ -1,15 +1,36 @@
-// Back to top button
+// Variables
 let btt = document.getElementById('back-to-top');
 let main = document.getElementById('maincont');
+let blurb = document.getElementById('blurb');
+let burger = document.getElementById('burger')
+let miniNav = document.getElementById('mini-nav')
+let list = document.getElementById('list');
+let bar = document.getElementById('searchbar')
+let prizes = document.getElementsByClassName('prizes');
+let anchors = Array.from(document.getElementsByClassName('cat'))
+let previous = document.getElementById('previous')
+let bidLink = Array.from(document.getElementsByClassName('bid-link'))
+let prizeTitle = Array.from(document.getElementsByClassName('p-title'))
+let prizeInput = document.getElementById('p-search')
+let form = document.getElementById('bid-form')
+let subBut = document.getElementById('submit')
+let box = document.getElementById('consent')
+let timeInput = document.getElementById('timeInput')
+let modal = document.getElementById('form-modal')
+let modalBody = document.getElementById('modal-body')
+let overlayEl = document.getElementById('overlay')
+let spinner = document.getElementById('spin')
+let check = document.getElementById('check')
+let mSubmit = document.getElementById('modal-submit')
+let mCancel = document.getElementById('modal-cancel')
 
 
+// Back to top button
 btt.addEventListener('click', function(){
     window.scrollTo(0,0);
 });
 
 // get the new location and replaces href in backbutton
-let anchors = Array.from(document.getElementsByClassName('cat'))
-let previous = document.getElementById('previous')
 let pre = anchors.forEach(anchor => {
     anchor.addEventListener('click', function(){
         let prev = this.hash
@@ -19,10 +40,6 @@ let pre = anchors.forEach(anchor => {
 });
 
 // Bid link handlers
-let bidLink = Array.from(document.getElementsByClassName('bid-link'))
-let prizeTitle = Array.from(document.getElementsByClassName('p-title'))
-let prizeInput = document.getElementById('p-search')
-
 // on link click it sends the prize data title to the prize input
 bidLink.forEach(bl => {
     bl.addEventListener('click', function(e){
@@ -32,12 +49,7 @@ bidLink.forEach(bl => {
     })
 
 // Form handlers
-let form = document.getElementById('bid-form')
-let subBut = document.getElementById('submit')
-
 // fills in the bid time when the checkbox is checked
-let box = document.getElementById('consent')
-let timeInput = document.getElementById('timeInput')
 function addTime(){
     let d = new Date()
     let dateGroup = d.toTimeString('en-UK')
@@ -65,7 +77,6 @@ function dataConsent(){
 
 // checks form validation
 function validateForm() {
-
     let x = document.forms["bid-form"]["name"].value;
     let y = document.forms["bid-form"]["email"].value;
     let z = document.forms["bid-form"]["p-search"].value;
@@ -87,14 +98,11 @@ function validateForm() {
 };
 
 // Prevents submit and shows modal for confirmation
-let modal = document.getElementById('form-modal')
-let modalBody = document.getElementById('modal-body')
 function preventSubmit(event){
 
     let names = document.forms["bid-form"]["name"].value;
     let prize = document.forms["bid-form"]["p-search"].value;
     let bid = document.forms["bid-form"]["amount"].value;
-
     let valid = validateForm();
     let state = dataConsent();
 
@@ -125,9 +133,7 @@ function modalSend(){
     setTimeout(() => {form.reset(), 2000});
 }
 
-let overlayEl = document.getElementById('overlay')
-let spinner = document.getElementById('spin')
-let check = document.getElementById('check')
+
 // hides modal with cancel button
 function modalReset() {
     modal.style.display = "none"
@@ -159,8 +165,7 @@ function overlay(){
     setTimeout(modalReset, 3000);
 }
 
-let mSubmit = document.getElementById('modal-submit')
-let mCancel = document.getElementById('modal-cancel')
+
 subBut.addEventListener('click', preventSubmit)
 mSubmit.addEventListener('click', overlay)
 // mSubmit.addEventListener('click', () => {
@@ -186,10 +191,6 @@ if (Math.sign(offsetMillis) == '-1'){
 }
 
 // Search Bar
-let list = document.getElementById('list');
-let bar = document.getElementById('searchbar')
-let prizes = document.getElementsByClassName('prizes');
-
 function update_list(){
     let pri = Array.from(document.getElementsByClassName('p-title'))
 
@@ -240,20 +241,22 @@ function remove_list(){
 }
 
 function remove_nav(){
+    console.log('called')
     if (miniNav.classList.contains('show')){
         miniNav.classList.remove('show')
+        console.log('removed')
+    } else {
+        console.log('error')
     }
 }
 
 // Activates the mobile nav links
-// let main = document.getElementById('maincont');
-let burger = document.getElementById('burger')
-let miniNav = document.getElementById('mini-nav')
 burger.addEventListener('click', function(){
     miniNav.classList.toggle('show')
 })
 
 main.onclick = remove_nav;
+blurb.onclick = remove_nav;
 main.onclick = modalReset; //not sure this works
 bar.onchange = search_prizes;
 bar.onclick = remove_nav;

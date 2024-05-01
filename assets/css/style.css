@@ -84,7 +84,7 @@ header > div {
     float: right;
     padding: 0;
     right: 17%;
-    top: 9rem;
+    top: 10.2rem;
     text-align: center;
     border: 2px solid purple;
     border-radius: 5px;
@@ -180,6 +180,10 @@ nav .cat:hover {
     color: #75179b;
     line-height: 2.3rem;
     text-align: center;
+}
+
+.value {
+    color: white;
 }
 
 .prizes:hover #list a {
@@ -385,6 +389,7 @@ form #consent {
     width: 70%;
     height: 50vh;
     text-align: center;
+    z-index: 100;
 }
 
 .slant {
@@ -405,10 +410,13 @@ form #consent {
 }
 
 #modal-body {
-    height: 150px;
+    height: 33%;
     color: whitesmoke;
     padding: 20px;
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info {
@@ -450,14 +458,14 @@ form #consent {
     color: whitesmoke;
     border-radius: 5px;
     height: 30px;
-    background-color: palevioletred;
+    background-color: rgb(215, 56, 56);
     width: 30px;
     margin: 15px;
-    border: 2px solid palevioletred;
+    border: 2px solid rgb(215, 56, 56);
 }
 
 #modal-cancel:hover {
-    color: palevioletred;
+    color: rgb(215, 56, 56);
     background-color: whitesmoke;
     transform: scale(1.2);
 }
@@ -501,6 +509,7 @@ footer a {
 
     #nav-holder {
         width: 95%;
+        max-width: 100%;
     }
 
     #nav-holder nav {
@@ -532,13 +541,27 @@ footer a {
         display: block;
     }
 
-    header > div img {
+    /* header > div img {
         display: none;
+    } */
+
+    #form-holder {
+        width: 95%;
+    }
+
+    #form-modal {
+        --width: 90%;
+        width: 90%;
+    }
+
+    #modal-but {
+        bottom: 0%;
     }
 
     h1 {
         padding: unset;
         margin-bottom: 0;
+        font-size: x-large;
     }
 
     h3 {
@@ -554,7 +577,7 @@ footer a {
     #list {
         width: 80vw;
         --width: 80vw;
-        top: 10rem;
+        top: 14rem;
     }
 
     hr {
