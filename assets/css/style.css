@@ -182,6 +182,11 @@ nav .cat:hover {
     text-align: center;
 }
 
+
+.symbol {
+    content: "&#9776";
+}
+
 .prizes:hover #list a {
     width: 100%;
     color: whitesmoke;
