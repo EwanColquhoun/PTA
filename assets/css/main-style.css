@@ -1,0 +1,106 @@
+
+* {
+    margin: none;
+    font-family: 'Rebond', 'san-serif';
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+.activeNav {
+    background-color: #9ed6f0;
+    color: #394a5e !important;
+    font-weight: bold;
+}
+
+/* Header */
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Navigation */
+#main-nav-holder {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #394a5e;
+    height: 1.5rem;
+}
+
+#main-nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0.2rem 0.9rem;
+}
+
+#main-nav-links hr {
+    width: 2rem;
+    float: left;
+    background-color: #9ed6f0;
+    margin: 0.25rem 0;
+}
+
+#maincont {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 
+light blue #9ed6f0
+dark blue #394a5e */
+
+/* BTT button */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 70px;
+    right: 6vw;
+    border: 1px solid grey;
+    box-shadow: 4px 4px 12px 1px #888888;
+    border-radius: 21px;
+}
+
+.btt-link {
+    cursor: pointer;
+    color: black;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btt-link i {
+    font-size: x-large;
+}
+
+/* Footer */
+footer div {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+footer a {
+    color: unset;
+}
+
+/* Media queries */
+@media all and (max-width: 800px) {
+    body {
+        width: 95vw;
+    }
+}
+
+@media all and (max-width: 500px) {
+    footer a {
+        display: block;
+    }
+}

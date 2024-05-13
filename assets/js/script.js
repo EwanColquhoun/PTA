@@ -82,6 +82,7 @@ function validateForm() {
     let z = document.forms["bid-form"]["p-search"].value;
     let a = document.forms["bid-form"]["amount"].value;
     
+    console.log(x,y,z,a)
     if (x == "") {
       return false;
     } else if (y == "") {
@@ -174,21 +175,21 @@ mCancel.addEventListener('click', modalReset)
 main.addEventListener('click', modalReset) //needs to be body
 
 // disables submit button after the deadline
-function finishAuction() {
-    subBut.setAttribute('disabled', true);
-    alert("The PTA silent auction has finished. Thank you.")
-}
+// function finishAuction() {
+//     subBut.setAttribute('disabled', true);
+//     alert("The PTA silent auction has finished. Thank you.")
+// }
 
 // not 24hr! NOT wORKING IN USA
-var timeAtFinish = new Date("5/11/2024 11:59:59 PM").getTime()
-let timeNow = new Date().getTime()
-let offsetMillis = timeAtFinish - timeNow;
-if (Math.sign(offsetMillis) == '-1'){
-    setTimeout(finishAuction, offsetMillis);
-} else {
-    // console.log(timeAtFinish, timeNow, offsetMillis)
-    // console.log('timing error')
-}
+// var timeAtFinish = new Date("5/11/2024 11:59:59 PM").getTime()
+// let timeNow = new Date().getTime()
+// let offsetMillis = timeAtFinish - timeNow;
+// if (Math.sign(offsetMillis) == '-1'){
+//     setTimeout(finishAuction, offsetMillis);
+// } else {
+//     // console.log(timeAtFinish, timeNow, offsetMillis)
+//     // console.log('timing error')
+// }
 
 // Search Bar
 function update_list(){
