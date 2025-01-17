@@ -1,9 +1,6 @@
 // Variables
-let btt = document.getElementById('back-to-top');
-let main = document.getElementById('maincont');
-let blurb = document.getElementById('blurb');
-let burger = document.getElementById('burger')
-let miniNav = document.getElementById('mini-nav')
+// let main = document.getElementById('maincont');
+// let blurb = document.getElementById('blurb');
 let list = document.getElementById('list');
 let bar = document.getElementById('searchbar')
 let prizes = document.getElementsByClassName('prizes');
@@ -23,12 +20,6 @@ let spinner = document.getElementById('spin')
 let check = document.getElementById('check')
 let mSubmit = document.getElementById('modal-submit')
 let mCancel = document.getElementById('modal-cancel')
-
-
-// Back to top button
-btt.addEventListener('click', function(){
-    window.scrollTo(0,0);
-});
 
 // get the new location and replaces href in backbutton
 let pre = anchors.forEach(anchor => {
@@ -241,25 +232,10 @@ function remove_list(){
     list.style.display = 'none'
 }
 
-function remove_nav(){
-    console.log('called')
-    if (miniNav.classList.contains('show')){
-        miniNav.classList.remove('show')
-        console.log('removed')
-    } else {
-        console.log('error')
-    }
-}
 
-// Activates the mobile nav links
-burger.addEventListener('click', function(){
-    miniNav.classList.toggle('show')
-})
-
-main.onclick = remove_nav;
-blurb.onclick = remove_nav;
+// main.onclick = remove_nav;
+// blurb.onclick = remove_nav;
 main.onclick = modalReset; //not sure this works
 bar.onchange = search_prizes;
-bar.onclick = remove_nav;
-miniNav.onclick = remove_nav;
+// bar.onclick = remove_nav;
 window.DOMContentLoaded = update_list();

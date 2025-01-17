@@ -56,6 +56,94 @@ header > div {
 light blue #9ed6f0
 dark blue #394a5e */
 
+/* Contact form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin: 1rem 0;
+}
+
+#contact-form input {
+    padding: 0.2rem 0;
+}
+#message {
+    height: fit-content;
+    min-height: 5rem;
+}
+
+#con-submit {
+    width: 70%;
+    margin: 2rem auto;
+    height: 2rem;
+    background-color: #9ed6f0;
+    color: #394a5e;
+    border: none;
+    border-radius: 3px;
+    font-size: large;
+}
+
+/* infographs */
+.halfdonut-progress {
+    width: 10rem;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: end center;
+  }
+  .halfdonut-progress::before{
+    --fill-hue-min: 0deg;
+    --fill-hue-max: 100deg;
+    --fill-hue: calc(var(--fill-hue-min) + ((var(--fill-hue-max) - var(--fill-hue-min))) * var(--val));
+    --fill-color: hsl(var(--fill-hue) 100% 50%);
+    --track-color: hsl(0 0% 50% / .5);
+    
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    
+    background-image: conic-gradient(from 90deg, var(--fill-color) 180deg, var(--track-color) 0 );
+    --mask-image: radial-gradient(100% 100%, transparent calc(30% - 1px), black 30%);
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+    transform: rotate(calc(180deg * var(--val)));
+    animation: progress 2s ease;
+  }
+  @keyframes progress {
+    from { transform: rotate(0deg)}
+  }
+
+#info-holder {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-holder {
+    background-color: azure;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    margin: 2rem auto;
+}
+
+.event-card {
+    background-color: #9ed6f0;
+    width: 30%;
+    height: 150px;
+    border-radius: 5px;
+    text-align: center;
+}
+  
+
 /* BTT button */
 .btt-button {
     height: 42px;
@@ -86,6 +174,7 @@ dark blue #394a5e */
 footer div {
     text-align: center;
     margin: 2rem auto;
+    padding-top: 8rem;
 }
 
 footer a {
