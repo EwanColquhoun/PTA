@@ -25,6 +25,10 @@ header > div {
     margin-top: 10px;
 }
 
+h1 {
+    color: #394a5e;
+}
+
 /* Navigation */
 #main-nav-holder {
     max-width: 100%;

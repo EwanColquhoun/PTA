@@ -11,7 +11,7 @@
 
 .content {
     overflow: hidden;
-    height: 300px;
+    height: 230px;
 }
 
 .content>image {
@@ -38,4 +38,10 @@
     background-color: #394A5F;
     border-radius: 20%;
     margin: 2rem auto;
+}
+
+.year-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
