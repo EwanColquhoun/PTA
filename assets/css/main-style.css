@@ -55,7 +55,6 @@ p {
 }
 
 #maincont {
-    position: relative;
     width: 80%;
     margin: 0 auto;
 }
@@ -96,8 +95,14 @@ dark blue #394a5e */
 /* Main page */
 
 #info {
-    background-color: rgb(220, 56, 220);
+    display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #9ed6f0; */
+    position: relative;
+    height: 70vh;
 }
 
 #info-holder {
@@ -106,6 +111,52 @@ dark blue #394a5e */
     flex-direction: column;
     align-items: center;
 }
+
+#left-info {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#left-img {
+    background-image: url(/assets/images/gen/playground.jpeg);
+    background-position: center 0%;
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 15%;
+}
+
+#info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #00709694;
+    border-radius: 0% 0% 89px 89px;
+}
+
+#info-overlay > p {
+    padding: 20px;
+    font-size: x-large;
+    color: #fff3f8;
+}
+
+/* #left-img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+} */
+
+#stats {
+    position: absolute;
+    right: 0;
+}
+
 
 /* Social event cards */
 #card-holder {
@@ -152,10 +203,16 @@ dark blue #394a5e */
     width: 100%;
     bottom: 0;
     padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .soc-det-holder > a {
-    bottom: 0;
+    bottom: 5px;
+    position: absolute;
 }
 
 /* BTT button */
