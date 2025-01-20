@@ -44,18 +44,65 @@
             </p> 
         </div>
         <div id="form-holder">
+            <!-- zoho form  -->
+            <!-- Need to chang the primary address to the curriepta@gmail.com one so that forwarding is correct. -->
+
+            <div id="zf_div_JH3_dOMXTQZ3UTbAJxlHItBqDFkWso5yMx4KsYBsMT8"></div><script type="text/javascript">(function() {
+                try{
+                var f = document.createElement("iframe");
+                f.src = 'https://forms.zohopublic.eu/ausfugdevservices1/form/PTAContactUsForm/formperma/JH3_dOMXTQZ3UTbAJxlHItBqDFkWso5yMx4KsYBsMT8?zf_rszfm=1';
+                f.style.border="none";
+                f.style.height="800px";
+                f.style.width="90%";
+                f.style.transition="all 0.5s ease";
+                f.setAttribute("aria-label", 'PTA\x20Contact\x20Us\x20Form');
+                
+                var d = document.getElementById("zf_div_JH3_dOMXTQZ3UTbAJxlHItBqDFkWso5yMx4KsYBsMT8");
+                d.appendChild(f);
+                window.addEventListener('message', function (){
+                var evntData = event.data;
+                if( evntData && evntData.constructor == String ){
+                var zf_ifrm_data = evntData.split("|");
+                if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                var zf_perma = zf_ifrm_data[0];
+                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                var iframe = document.getElementById("zf_div_JH3_dOMXTQZ3UTbAJxlHItBqDFkWso5yMx4KsYBsMT8").getElementsByTagName("iframe")[0];
+                if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                var prevIframeHeight = iframe.style.height;
+                var zf_tout = false;
+                if( zf_ifrm_data.length == 3 ) {
+                iframe.scrollIntoView();
+                zf_tout = true;
+                }
+                if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                if( zf_tout ) {
+                setTimeout(function(){
+                iframe.style.height = zf_ifrm_ht_nw;
+                },500);
+                } else {
+                iframe.style.height = zf_ifrm_ht_nw;
+                }
+                }
+                }
+                }
+                }
+                }, false);
+                }catch(e){}
+                })();</script>
+
+
           <!-- form with name, email, message. -->
-          <form id="contact-form" action="mailto:ewancolquhoun@hotmail.com">
+          <!-- <form id="contact-form" onsubmit="formSubmit()">
             <label for="name_input">Name:</label>
-            <input type="text" placeholder="Name" id="name_input" autocomplete="name">
+            <input type="text" placeholder="Name" id="name_input" autocomplete="name" value="Ewan">
             <label for="email">Email:</label>
-            <input type="email" placeholder="email@email.com" id="email" autocomplete="email">
+            <input type="email" placeholder="email@email.com" id="email" autocomplete="email" value="ewancolquhoun@hotmail.com">
             <label for="subject" >Subject:</label>
-            <input type="text" id="subject" placeholder="Donation">
+            <input type="text" id="subject" placeholder="Donation" value="Donation">
             <label for="message">Message:</label>
-            <input type="textbox" id="message" placeholder="Hi Currie PTA...">
-            <button id="con-submit" type="submit">Submit</button>
-          </form>
+            <input type="textbox" id="message" placeholder="Hi Currie PTA..." value="TEST message">
+            <button id="emailSubmit" type="submit">Submit</button>
+          </form> -->
         </div>
         <!--  -->
     </div>

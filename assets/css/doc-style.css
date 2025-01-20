@@ -9,6 +9,10 @@
     margin: auto;
 }
 
+.c-heading {
+    text-align: center;
+}
+
 .content {
     overflow: hidden;
     height: 230px;
@@ -44,4 +48,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.icons {
+    font-size: x-large;
+    color: #394A5F;
+}
+
+.icons:hover {
+    scale: 1.1;
+    color: coral;
 }

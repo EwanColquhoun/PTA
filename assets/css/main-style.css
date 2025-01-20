@@ -29,6 +29,10 @@ h1 {
     color: #394a5e;
 }
 
+p {
+    margin: unset;
+}
+
 /* Navigation */
 #main-nav-holder {
     max-width: 100%;
@@ -78,7 +82,7 @@ dark blue #394a5e */
     min-height: 5rem;
 }
 
-#con-submit {
+#emailSubmit {
     width: 70%;
     margin: 2rem auto;
     height: 2rem;
@@ -89,40 +93,12 @@ dark blue #394a5e */
     font-size: large;
 }
 
-/* infographs */
-.halfdonut-progress {
-    width: 10rem;
-    aspect-ratio: 2/1;
-    overflow: hidden;
-    position: relative;
-    display: grid;
-    place-items: end center;
-  }
-  .halfdonut-progress::before{
-    --fill-hue-min: 0deg;
-    --fill-hue-max: 100deg;
-    --fill-hue: calc(var(--fill-hue-min) + ((var(--fill-hue-max) - var(--fill-hue-min))) * var(--val));
-    --fill-color: hsl(var(--fill-hue) 100% 50%);
-    --track-color: hsl(0 0% 50% / .5);
-    
-    content: "";
-    position: absolute;
+/* Main page */
+
+#info {
+    background-color: rgb(220, 56, 220);
     width: 100%;
-    top: 0;
-    left: 0;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    
-    background-image: conic-gradient(from 90deg, var(--fill-color) 180deg, var(--track-color) 0 );
-    --mask-image: radial-gradient(100% 100%, transparent calc(30% - 1px), black 30%);
-    -webkit-mask-image: var(--mask-image);
-    mask-image: var(--mask-image);
-    transform: rotate(calc(180deg * var(--val)));
-    animation: progress 2s ease;
-  }
-  @keyframes progress {
-    from { transform: rotate(0deg)}
-  }
+}
 
 #info-holder {
     display: flex;
@@ -131,22 +107,56 @@ dark blue #394a5e */
     align-items: center;
 }
 
+/* Social event cards */
 #card-holder {
     background-color: azure;
     display: flex;
     justify-content: space-around;
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     margin: 2rem auto;
+    min-height: 36vh;
+    max-height: 100vh;
 }
 
 .event-card {
+    background-image: url(/assets/images/gen/social.jpg);
+    background-size: cover;
     background-color: #9ed6f0;
     width: 30%;
-    height: 150px;
+    height: 300px;
     border-radius: 5px;
     text-align: center;
+    position: relative;
 }
-  
+
+.date-holder {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    background-color: #004494;
+    color: #d5e3f1;
+    border-radius: 5%;
+    width: fit-content;
+    font-size: x-large;
+    padding: 0px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.soc-det-holder {
+    height: 200px;
+    background-color: rgb(255 255 255 / 40%);
+    color: #892c89;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 0 1rem;
+}
+
+.soc-det-holder > a {
+    bottom: 0;
+}
 
 /* BTT button */
 .btt-button {
@@ -197,3 +207,96 @@ footer a {
         display: block;
     }
 }
+
+/* Events slideshow */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  max-width: 33%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(235, 23, 23);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* Social events cards */
