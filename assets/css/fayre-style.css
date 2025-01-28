@@ -1,0 +1,33 @@
+#mf-info {   
+    margin: auto;
+    text-align: center;
+}
+
+#top-line {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+#mf-info-holder, #stall-holder {
+    display: inline-flex;
+    height: 400px;
+    width: 49%;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.mf-sub-heading, .mf-stall-heading {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    font-size: larger;
+    margin: auto;
+    padding: 1rem;
+}
+
+#stalls-body > li {
+    text-decoration: none;
+}

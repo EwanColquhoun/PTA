@@ -151,19 +151,17 @@ dark blue #394a5e */
     font-size: larger;
 }
 
-/* #left-img > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-} */
-
 #stats {
     position: absolute;
     right: 0;
 }
 
-/* Fundraiser event cards */
-.fund-card {
+/* Fundraiser & Social event cards */
+.slideshow-container > h2, .soc-slideshow-container > h2 {
+    text-align: center;
+}
+
+.fund-card, .soc-card {
     background-color: #9ed6f0;
     margin: 0rem 1rem;
     width: 30%;
@@ -178,7 +176,7 @@ dark blue #394a5e */
     background-position: center;
 }
 
-.fund-det-holder {
+.fund-det-holder, .soc-det-holder {
     height: 200px;
     background-color: rgb(255 255 255 / 60%);
     position: absolute;
@@ -229,7 +227,7 @@ dark blue #394a5e */
     align-items: center;
 }
 
-.soc-det-holder {
+/* .soc-det-holder {
     height: 200px;
     background-color: rgb(255 255 255 / 40%);
     color: #892c89;
@@ -242,7 +240,7 @@ dark blue #394a5e */
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
-}
+} */
 
 .soc-det-holder > a, .fund-det-holder > a {
     bottom: 5px;
@@ -303,14 +301,14 @@ footer a {
 * {box-sizing:border-box}
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container, .soc-slideshow-container {
   max-width: 100%;
   position: relative;
   margin: 5rem 1rem auto;
 }
 
 /* Hide the images by default */
-.mySlides {
+.mySlides, .mySlides2 {
   transition: 0.6s ease;
   display: none;
   max-width: 90%;
@@ -320,7 +318,7 @@ footer a {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev, .next, .prev2, .next2 {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -336,13 +334,13 @@ footer a {
 }
 
 /* Position the "next button" to the right */
-.next {
+.next, .next2 {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover, .next:hover, .prev2:hover, .next2:hover {
     scale: 1.2;
     transition: 40ms;
 }
@@ -368,7 +366,7 @@ footer a {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot, .dot2 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -379,7 +377,7 @@ footer a {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active, .dot:hover, .dot2:hover {
   background-color: #717171;
 }
 
