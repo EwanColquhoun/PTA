@@ -1,6 +1,6 @@
 // Variables
-// let main = document.getElementById('maincont');
-// let blurb = document.getElementById('blurb');
+let main = document.getElementById('maincont');
+let blurb = document.getElementById('blurb');
 let list = document.getElementById('list');
 let bar = document.getElementById('searchbar')
 let prizes = document.getElementsByClassName('prizes');
@@ -20,6 +20,27 @@ let spinner = document.getElementById('spin')
 let check = document.getElementById('check')
 let mSubmit = document.getElementById('modal-submit')
 let mCancel = document.getElementById('modal-cancel')
+let burger = document.getElementById('burger')
+let miniNav = document.getElementById('mini-nav')
+
+// Auction burger expand
+burger.addEventListener('click', function(){
+    miniNav.classList.toggle('show')
+})
+
+// Mobile Auction Nav
+function remove_nav(){
+    if (miniNav.classList.contains('show')){
+        miniNav.classList.remove('show')
+        console.log('removed')
+    } else {
+        console.log('error')
+    }
+}
+
+main.onclick = remove_nav;
+blurb.onclick = remove_nav;
+
 
 // get the new location and replaces href in backbutton
 let pre = anchors.forEach(anchor => {
@@ -163,7 +184,7 @@ mSubmit.addEventListener('click', overlay)
 // mSubmit.addEventListener('click', () => {
 //     setTimeout(modalSend, 4000)})
 mCancel.addEventListener('click', modalReset)
-main.addEventListener('click', modalReset) //needs to be body
+// main.addEventListener('click', modalReset) //needs to be body
 
 // disables submit button after the deadline
 // function finishAuction() {
@@ -235,7 +256,7 @@ function remove_list(){
 
 // main.onclick = remove_nav;
 // blurb.onclick = remove_nav;
-main.onclick = modalReset; //not sure this works
+// main.onclick = modalReset; //not sure this works
 bar.onchange = search_prizes;
 // bar.onclick = remove_nav;
 window.DOMContentLoaded = update_list();

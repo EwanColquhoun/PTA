@@ -14,22 +14,42 @@
 <body>
     <!-- navigation -->
     <header id="header">
-        <div>
+        <div id="logo-block">
             <a href="https://currieprimary.com/" target="_blank">
                 <img src="assets/images/gen/cpslogoTr.png" alt="Currie PS logo" width="150" height="150">
             </a>
             <h1>Currie Primary School PTA</h1>
         </div>
         <div id="main-nav-holder">
-            <nav>
+            <div id="small-head">
+                <h2>PTA | Documents</h2>
+            </div>
+            <button id="main-burger"><i class="fa-solid fa-bars"></i></button> 
+            <div id="main-nav-links">
                 <div id="main-nav-links">
                     <a href="/indexNEW.html" class="">Home</a>
-                    <a href="/whatis.html" class="">What is the PTA?</a>
+                    <a href="/whatis.html" class="">About</a>
                     <a href="/documents.html" class="activeNav">Documents</a>
                     <a href="/fayre.html" class=" ">May Fayre</a>
                     <a href="/contact.html" class="">Contact</a>
                 </div>
-            </nav>
+            </div>
+            <div id="mobile-nav-links">
+                <div id="ul-holder">
+                    <ul>
+                        <li><a href="/indexNEW.html" class="">Home</a>
+                        </li>
+                        <li><a href="/whatis.html" class="">About</a>
+                        </li>
+                        <li><a href="/documents.html" class="activeNav">Documents</a>
+                        </li>
+                        <li><a href="/fayre.html" class=" ">May Fayre</a>
+                        </li>
+                        <li><a href="/contact.html" class="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -39,6 +59,13 @@
             <div class="row">
                 <h2 class="c-heading">Newsletters</h2>
                 <div class="col">
+                    <div class="article">
+                        <h3>Jan 2025</h3>
+                        <div class="content">
+                            <img src="/assets/images/articles/NLjan2025.png" width="100%" height="100%" aria-label="Christmas image for Jan newsletter">
+                        </div>
+                        <a class="doc-link" href="docs/newsletters/currie-primary-school-pta-newsletter-january-2025.pdf" alt="Jan 2025 newsletter"><i class="fa-solid fa-download icons"></i></a>
+                    </div>
                     <div class="article">
                         <h3>Jan 2024</h3>
                         <div class="content">
@@ -133,7 +160,7 @@
         </div>
     </footer>
 <!-- 
-    <script src="assets/js/accscript.js"></script>
-    <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/accscript.js"></script> -->
+    <script src="assets/js/mainScript.js"></script>
 </body>
 </html>

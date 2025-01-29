@@ -13,34 +13,51 @@
 <body>
     <!-- navigation -->
     <header id="header">
-        <div>
+        <div id="logo-block">
             <a href="https://currieprimary.com/" target="_blank">
                 <img src="assets/images/gen/cpslogoTr.png" alt="Currie PS logo" width="150" height="150">
             </a>
             <h1>Currie Primary School PTA</h1>
         </div>
         <div id="main-nav-holder">
-            <nav>
+            <div id="small-head">
+                <h2>PTA | Contact</h2>
+            </div>
+            <button id="main-burger"><i class="fa-solid fa-bars"></i></button> 
+            <div id="main-nav-links">
                 <div id="main-nav-links">
-                    <div id="main-nav-links">
-                        <a href="/indexNEW.html" class="">Home</a>
-                        <a href="/whatis.html" class="">What is the PTA?</a>
-                        <a href="/documents.html" class="">Documents</a>
-                        <a href="/fayre.html" class="">May Fayre</a>
-                        <a href="/contact.html" class="activeNav">Contact</a>
-                    </div>
+                    <a href="/indexNEW.html" class="">Home</a>
+                    <a href="/whatis.html" class="">About</a>
+                    <a href="/documents.html" class="">Documents</a>
+                    <a href="/fayre.html" class="">May Fayre</a>
+                    <a href="/contact.html" class="activeNav">Contact</a>
                 </div>
-            </nav>
+            </div>
+            <div id="mobile-nav-links">
+                <div id="ul-holder">
+                    <ul>
+                        <li><a href="/indexNEW.html" class="activeNav">Home</a>
+                        </li>
+                        <li><a href="/whatis.html" class="">About</a>
+                        </li>
+                        <li><a href="/documents.html" class="">Documents</a>
+                        </li>
+                        <li><a href="/fayre.html" class=" ">May Fayre</a>
+                        </li>
+                        <li><a href="/contact.html" class="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
     <div id="maincont">
-        <div>
+        <div id="contact-blurb">
             <p>
-                Please get intouch! We will endeavour to get back to you as soon as possible. The PTA email is <a href="mailto:curriepta@gmail.com">curriepta@gmail.com</a>.<br>
-            </p>
-            <p>
-                Alternatively fill in the form below. 
+                Please get intouch! We will endeavour to get back to you as soon as possible. 
+                <br>The PTA email is <a href="mailto:curriepta@gmail.com">curriepta@gmail.com</a>.
+                <br>Alternatively fill in the form below. 
             </p> 
         </div>
         <div id="form-holder">
@@ -122,8 +139,12 @@
         </div>
     </footer>
     <script src="/assets/js/contactScript.js" type="application/javascript"></script>
+    <script src="/assets/js/mainScript.js" type="application/javascript"></script>
 <!-- 
     <script src="assets/js/accscript.js"></script>
     <script src="assets/js/script.js"></script> -->
 </body>
 </html>
+
+
+
