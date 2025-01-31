@@ -22,7 +22,7 @@ header > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 h1 {
@@ -32,6 +32,13 @@ h1 {
 p {
     margin: unset;
 }
+
+#logo-block {
+    background: rgb(57,74,94);
+background: -moz-linear-gradient(90deg, rgba(57,74,94,1) 0%, rgba(116,210,255,0.7988445378151261) 34%);
+background: -webkit-linear-gradient(90deg, rgba(57,74,94,1) 0%, rgba(116,210,255,0.7988445378151261) 34%);
+background: linear-gradient(90deg, rgba(57,74,94,1) 0%, rgba(116,210,255,0.7988445378151261) 34%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endColorstr="#74d2ff",GradientType=1);}
 
 /* Navigation */
 #ul-holder {
@@ -57,9 +64,9 @@ p {
     display: block !important;
     position: absolute;
     background: #394a5e;
-    width: 50%;
+    /* width: 50%; */
     right: 4rem;
-    top: 2rem;
+    top: 1rem;
     z-index: 500;
     box-shadow: 5px 5px 5px 5px #394a5e;
     border-radius: 5px;
@@ -69,7 +76,8 @@ p {
 
 #main-nav-holder {
     max-width: 100%;
-    margin: 1rem auto;
+    margin: auto;
+    margin-bottom: unset;
     background-color: #394a5e;
     height: 1.9rem;
 }
@@ -92,14 +100,56 @@ p {
     margin: 0 auto;
 }
 
-/* 
-light blue #9ed6f0
-dark blue #394a5e */
+/* Scroller */
+
+.scroll-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+}
+
+.scroll-link:hover {
+    transition: 500ms;
+    background-color: #483fc4;
+}
+
+.scroll-left {
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    background: red;
+    font-weight: bold;
+}
+.scroll-left p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 25px;
+    text-align: center;
+    /* Starting position */
+    /* transform:translateX(100%); */
+    /* Apply animation to this element */
+    /* animation: scroll-left 25s linear infinite; */
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+
+
 
 /* Contact form */
 #contact-blurb {
     text-align: center;
-    margin: 2rem auto;
+    margin: auto;
     background-image: url(/assets/images/gen/playground.jpeg);
     background-size: cover;
     background-position: center;
@@ -156,7 +206,7 @@ dark blue #394a5e */
     width: 100%;
     /* flex-wrap: wrap; */
     justify-content: space-between;
-    align-items: center;
+    /* align-items: flex-end; */
     /* background-color: #9ed6f0; */
     position: relative;
     height: 70vh;
@@ -180,13 +230,15 @@ dark blue #394a5e */
 }
 
 #info-overlay {
-    background-color: rgb(251 247 207 / 61%);
+    background-color: rgba(207 226 251 / 70%);
 }
 
 #info-overlay p {
     padding: 20px;
     color: #002a4c;
     font-size: larger;
+    font-weight: bold;
+    line-height: 1.3;
 }
 
 .info-title {
@@ -203,6 +255,13 @@ dark blue #394a5e */
 .large {
     display: block;
 }
+
+#slide-cont {
+    background: rgb(225,225,182);
+background: -moz-linear-gradient(0deg, rgba(225,225,182,0.7428221288515406) 0%, rgba(201,232,247,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(225,225,182,0.7428221288515406) 0%, rgba(201,232,247,1) 100%);
+background: linear-gradient(0deg, rgba(225,225,182,0.7428221288515406) 0%, rgba(201,232,247,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endColorstr="#c9e8f7",GradientType=1);}
 
 .slideshow-container > h2, .mob-slideshow-container > h2 {
     text-align: center;
@@ -308,8 +367,7 @@ dark blue #394a5e */
 /* Footer */
 footer div {
     text-align: center;
-    margin: 2rem auto;
-    padding-top: 8rem;
+    margin: 1rem auto;
 }
 
 footer a {
@@ -318,6 +376,11 @@ footer a {
 
 /* Media queries */
 @media all and (max-width: 800px) {
+
+    #info-overlay p {
+        font-size: unset;
+    }
+
     #small-head {
         display: block;
     }    
@@ -395,9 +458,14 @@ footer a {
 
 /* Slideshow container */
 .slideshow-container, .mob-slideshow-cont {
-  max-width: 100%;
-  position: relative;
-  margin: 5rem 1rem auto;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.slideshow-container h2, .mob-slideshow-cont h2 {
+    text-align: center;
 }
 
 /* Hide the images by default */
