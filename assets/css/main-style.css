@@ -78,7 +78,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
     margin: auto;
     margin-bottom: unset;
     background-color: #394a5e;
-    height: 1.9rem;
+    height: 3rem;
 }
 
 #main-nav-links a, #ul-holder a {
@@ -96,8 +96,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 }
 
 #maincont {
-    /* width: 80%; */
     margin: 0 auto;
+    padding-bottom: 1rem;
 }
 
 /* Scroller */

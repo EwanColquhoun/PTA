@@ -1,22 +1,64 @@
-#mf-info {   
-    margin: auto;
-    text-align: center;
+h2 {
+    margin: unset;
 }
 
 #top-line {
     width: 100%;
-    background-color: antiquewhite;
+    display: flex;
 }
 
-#mf-info-holder, #stall-holder {
+.mf-main {
+    background-image: url(/assets/images/gen/yard.jpg)
+}
+
+#mf-info {   
+    margin: auto;
+    display: flex;
+    width: 95%;
+    height: 5rem;
+    background-color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#mf-info-body p {
+    padding-top: 2rem;
+}
+
+
+.mf-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: whitesmoke;
     display: inline-flex;
-    height: 400px;
-    width: 49%;
+    height: fit-content;
+    min-height: 400px;
+    width: calc(90% / 2);
     text-align: center;
     position: relative;
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.mf-full {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    padding: 1rem;
+    background-color: whitesmoke;
+    display: flex;
+    height: fit-content;
+    min-height: 400px;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+
+#map-holder {
+    margin-top: 1rem;
 }
 
 .mf-sub-heading, .mf-stall-heading {
@@ -28,6 +70,27 @@
     padding: 1rem;
 }
 
-#stalls-body > li {
-    text-decoration: none;
+.stalls-body ul {
+    padding: unset;
+}
+
+.stalls-body li {
+    list-style-type: none;
+}
+
+
+
+@media all and (max-width: 800px) {
+    #top-line {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .mf-card {
+        width: 95%;
+    }
+
+    .mf-full {
+        margin: 2rem auto;
+    }
 }
