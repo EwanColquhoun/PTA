@@ -8,7 +8,8 @@ h2 {
 
 
 #top-line {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -32,6 +33,10 @@ h2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#mf-info-holder {
+  width: calc(90% / 3* 2)
+}
+
 #mf-info-body p {
     padding-top: 2rem;
     font-size: larger;
@@ -52,7 +57,7 @@ h2 {
     display: inline-flex;
     height: fit-content;
     min-height: 400px;
-    width: calc(90% / 2);
+    /* width: calc(90% / 2); */
     text-align: center;
     position: relative;
     justify-content: center;
@@ -94,7 +99,6 @@ h2 {
   list-style-type: none;
   font-size: larger;
   color: #394a5e;
-  font-family: sans-serif;
   line-height: 1.4;
 }
 
@@ -497,6 +501,10 @@ body:has(input#b10:checked), .thumbnails label[for=b10] {
 
     #mf-info {
         background-size: 75%;
+    }
+
+    #mf-info-holder {
+      width: 95%;
     }
 
     .mf-card {

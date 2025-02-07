@@ -1,7 +1,7 @@
 
 * {
     margin: none;
-    font-family: 'Rebond', 'san-serif';
+    font-family: sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
@@ -205,12 +205,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 #info {
     display: flex;
     width: 100%;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
-    /* align-items: flex-end; */
-    /* background-color: #9ed6f0; */
     position: relative;
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     background-image: url(/assets/images/gen/gate.jpg);
     background-position: center;
 }
@@ -239,7 +237,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
     padding: 20px;
     color: #002a4c;
     font-size: larger;
-    font-weight: bold;
+    /* font-weight: bold; */
     line-height: 1.3;
 }
 
@@ -440,7 +438,7 @@ footer a {
         display: block;
         position: relative;
     }
-    
+
     .largest {
         display: none;
     }

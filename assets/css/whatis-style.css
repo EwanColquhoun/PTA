@@ -21,6 +21,7 @@
 .questions, .bearers {
     margin: 0 auto;
     padding: 2rem;
+    font-size: larger;
 }
 
 .questions p {
