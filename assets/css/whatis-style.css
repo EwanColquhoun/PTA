@@ -2,6 +2,7 @@
     background-image: url(/assets/images/gen/overview.jpg);
     height: 100vh;
     position: relative;
+    background-attachment: fixed;
 }
 
 #about-overlay {

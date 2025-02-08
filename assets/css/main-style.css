@@ -97,7 +97,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 
 #maincont {
     margin: 0 auto;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     /* padding-top: 1rem; */
 }
 
@@ -145,8 +145,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 }
 
 
-
-
 /* Contact form */
 #contact-blurb {
     text-align: center;
@@ -172,35 +170,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
     text-align: center;
 }
 
-/* #contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact-form label {
-    margin: 1rem 0;
-}
-
-#contact-form input {
-    padding: 0.2rem 0;
-}
-#message {
-    height: fit-content;
-    min-height: 5rem;
-}
-
-#emailSubmit {
-    width: 70%;
-    margin: 2rem auto;
-    height: 2rem;
-    background-color: #9ed6f0;
-    color: #394a5e;
-    border: none;
-    border-radius: 3px;
-    font-size: large;
-} */
-
 /* Main page */
+.cover{
+    background-image: url(/assets/images/gen/gate.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
 
 #info {
     display: flex;
@@ -209,8 +184,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
     position: relative;
     min-height: 70vh;
     height: fit-content;
-    background-image: url(/assets/images/gen/gate.jpg);
-    background-position: center;
+    /* background-image: url(/assets/images/gen/gate.jpg);
+    background-position: center; */
 }
 
 #info-blurb {
@@ -248,6 +223,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 }
 
 /* Fundraiser & Social event cards */
+.headings {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.updated {
+    color: grey;
+}
+
 .mobile {
     display: none;
 }
@@ -267,16 +251,12 @@ background: -webkit-linear-gradient(0deg, rgba(225,225,182,0.7428221288515406) 0
 background: linear-gradient(0deg, rgba(225,225,182,0.7428221288515406) 0%, rgba(201,232,247,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endColorstr="#c9e8f7",GradientType=1);}
 
-.slideshow-container > h2, .mob-slideshow-container > h2 {
-    text-align: center;
-}
-
 .fund-card, .soc-card {
     background-color: #9ed6f0;
     margin: 0rem 1rem;
     width: 30%;
     position: relative;
-    border-radius: 5%;
+    border-radius: 1%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -288,7 +268,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endCo
 
 .fund-det-holder, .soc-det-holder {
     height: 200px;
-    background-color: rgb(255 255 255 / 60%);
+    background-color: rgb(255 255 255 / 70%);
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -316,7 +296,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endCo
     background-color: #9ed6f0;
     width: 30%;
     height: 300px;
-    border-radius: 5px;
+    border-radius: 1%;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -340,6 +320,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endCo
 .soc-det-holder > a, .fund-det-holder > a {
     bottom: 5px;
     position: absolute;
+}
+
+.meeting {
+    background-image: url(/assets/images/gen/meeting.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 /* BTT button */
@@ -443,10 +429,6 @@ footer a {
         display: none;
     }
 
-}
-
-@media all and (max-width: 500px) {
-    /* test for small slideshow */
     .large {
         display: none;
     }
@@ -460,6 +442,9 @@ footer a {
         bottom: 36px;
     }
 
+}
+
+@media all and (max-width: 500px) {
     /* footer */
     footer a {
         display: block;
@@ -478,7 +463,7 @@ footer a {
 }
 
 .slideshow-container h2, .mob-slideshow-cont h2 {
-    text-align: center;
+    margin-bottom: 0;
 }
 
 /* Hide the images by default */
@@ -553,6 +538,7 @@ footer a {
     width: 70%;
     margin: 1rem auto;
     flex-direction: column;
+    background-color: violet;
 }
 
 

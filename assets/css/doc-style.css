@@ -1,7 +1,10 @@
 #doc-bg-holder{
     height: 100%;
     padding-bottom: 1rem;
-    background-image: url(/assets/images/gen/yard.jpg);
+    background-image: url(/assets/images/gen/climbing.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .article {
