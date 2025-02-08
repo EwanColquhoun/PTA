@@ -1,15 +1,25 @@
+#doc-bg-holder{
+    height: 100%;
+    padding-bottom: 1rem;
+    background-image: url(/assets/images/gen/yard.jpg);
+}
+
 .article {
-    width: 30%;
+    /* width: 30%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem auto;
+    background: rgba(240, 248, 255, 0.8);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .c-heading {
     text-align: center;
+    padding-top: 1rem;
+    margin-top: 0;
+    color: aliceblue;
 }
 
 .content {
@@ -37,8 +47,8 @@
 #docs-hr {
     width: 50%;
     height: 8px;
-    border: 3px solid #394A5F;
-    background-color: #394A5F;
+    /* border: 3px solid #394A5F; */
+    background-color: rgba(240, 248, 255, 0.8);
     border-radius: 20%;
     margin: 2rem auto;
 }
@@ -57,4 +67,25 @@
 .icons:hover {
     scale: 1.1;
     color: coral;
+}
+
+.minutes {
+    background: aliceblue;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(240, 248, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+@media all and (max-width: 800px) {
+    .col {
+        flex-direction: column;
+    }
+
+    .article {
+        width: 70%;
+    }
+
 }
