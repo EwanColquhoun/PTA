@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+#nr {
+    text-align: center;
+    margin: 3rem;
+}
+
 body {
     background-color: whitesmoke;
     margin: auto;
