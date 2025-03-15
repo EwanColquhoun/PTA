@@ -32,6 +32,6 @@
 @media all and (max-width: 800px) {
     #container {
         max-width: 90%;
-        left: 0;
+        left: 5%;
     }
 }

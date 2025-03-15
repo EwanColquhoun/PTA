@@ -205,7 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 }
 
 #info-overlay {
-    background-color: rgba(207 226 251 / 70%);
+    background-color: rgba(207 226 251 / 80%);
 }
 
 #info-overlay p {
@@ -278,6 +278,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endCo
     align-content: center;
     flex-wrap: wrap;
     padding: 0.5rem;
+    text-align: center;
 }
 
 /* Social event cards */
