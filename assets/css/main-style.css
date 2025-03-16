@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-#nr {
-    text-align: center;
-    margin: 3rem;
-}
 
 body {
     background-color: whitesmoke;
@@ -149,6 +145,30 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
  }
 }
 
+/* 404 page */
+#nr {
+    text-align: center;
+    padding: 4rem;
+    height: 29rem;
+    background-image: url(/assets/images/gen/overview.jpg);
+    position: relative;
+    background-attachment: fixed;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffffa3;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.four-cont {
+    position: relative;
+    z-index: 150;
+}
 
 /* Contact form */
 #contact-blurb {
