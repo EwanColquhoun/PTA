@@ -160,7 +160,7 @@ nav .cat:hover {
     background-color: rgba(245, 245, 245, 0.95);
     max-height: 50vh;
     overflow: auto;
-    top: 21rem;
+    top: 27rem;
     left: calc(50% - (var(--width) / 2));
     --width: 50%;
     width: 50%;
@@ -488,6 +488,10 @@ footer a {
         width: 95vw;
     }
 
+    #list {
+        top:18.5rem ;
+    }
+
     .p-pholder {
       /* When on medium sized screens, we center it by evenly distributing empty space around items */
       justify-content: space-around;
@@ -578,7 +582,7 @@ footer a {
     #list {
         width: 80vw;
         --width: 80vw;
-        top: 14rem;
+        top: 11rem;
     }
 
     hr {
