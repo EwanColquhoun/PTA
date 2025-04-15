@@ -270,6 +270,9 @@ nav .cat:hover {
     font-size: x-large;
 }
 
+#lastP {
+    margin: 1rem auto;
+}
 /* categories */
 
 .category {
@@ -535,6 +538,8 @@ footer a {
       flex-direction: column;
       max-width: 90vw;
       padding: 0.25rem;
+      max-height: fit-content;
+      min-width: 80vw;
     }
 
     .cat {
