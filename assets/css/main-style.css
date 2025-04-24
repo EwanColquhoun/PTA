@@ -9,7 +9,8 @@
 
 body {
     background-color: whitesmoke;
-    margin: auto;
+    margin: unset;
+    width: 100%;
 }
 
 .activeNav {
@@ -58,6 +59,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
     width: 100%;
     margin-left: 1rem;
     color: whitesmoke;
+}
+
+#small-h2 {
+    width: max-content;
 }
 
 .showNav{

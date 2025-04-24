@@ -83,7 +83,7 @@ header > div {
     float: right;
     padding: 0;
     right: 17%;
-    top: 15.2rem;
+    top: 10.2rem;
     text-align: center;
     border: 2px solid purple;
     border-radius: 5px;
@@ -595,7 +595,7 @@ footer a {
     }
 
     #blurb {
-        padding-top: 2.5rem;
+        padding-top: 3rem;
     }
 
     footer a {

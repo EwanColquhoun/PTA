@@ -22,7 +22,7 @@
     text-align: center;
     padding-top: 1rem;
     margin-top: 0;
-    color: aliceblue;
+    color: #003c71;
 }
 
 .content {
@@ -74,7 +74,7 @@
 
 .minutes {
     background: aliceblue;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     padding: 2rem;
     background: rgba(240, 248, 255, 0.8);
@@ -88,7 +88,7 @@
     }
 
     .article {
-        width: 70%;
+        width: 90%;
     }
 
 }

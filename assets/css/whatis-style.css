@@ -1,6 +1,6 @@
 #about-holder {
     background-image: url(/assets/images/gen/overview.jpg);
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     background-attachment: fixed;
 }
@@ -33,5 +33,6 @@
     #container {
         max-width: 90%;
         left: 5%;
+        position: relative;
     }
 }

@@ -232,7 +232,7 @@ h2 {
 /* CONTROLS */
 .controls {
 	width: 100vw;
-	height: 100vh;
+	height: 70vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: flex-end;
@@ -521,6 +521,7 @@ body:has(input#b10:checked), .thumbnails label[for=b10] {
 
     #mf-info-holder {
       width: 95%;
+      margin: auto;
     }
 
     .mf-card {
