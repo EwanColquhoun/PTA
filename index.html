@@ -5,644 +5,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://app.termly.io/resource-blocker/62c2218c-17b5-42e2-9f0a-a91d62c89ac8?autoBlock=on"></script>
     <script src="https://kit.fontawesome.com/48b20a3378.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <link prefetch rel="stylesheet" href="assets/css/auction-style.css">
+    <link prefetch rel="stylesheet" href="assets/css/accstyle.css">
     <link prefetch rel="stylesheet" href="assets/css/main-style.css">
-    <link rel="icon" href="assets/images/gen/cpslogoTr.png" type="image/x-icon">
-    <title>Currie P.S PTA | Home</title>
+    <link rel="icon" href="https://www.dentons.com/assets/flags/css/flag-icon.css" type="image/x-icon">
+    <title>Dentons Charity Auction</title>
 </head>
 
 <body>
     <!-- navigation -->
     <header id="header">
         <div id="logo-block">
-            <a href="https://currieprimary.com/" target="_blank">
-                <img src="assets/images/gen/cpslogoTr.png" alt="Currie PS logo" width="150" height="150">
+            <a href="https://www.dentons.com/" target="_blank">
+                <img src="https://www.dentons.com/-/media/images/website/logos/logos_svg/dentons-hong-kong-logo-rgb.ashx" alt="Dentons logo" width="150" height="150">
             </a>
-            <h1>Parent Teacher Association</h1>
+            <div id="main-nav-holder">
+                <!-- <div id="small-head">
+                    <h2 id="small-h2">Dentons | Charity Auction</h2>
+                </div> -->
+                <button id="main-burger"><i class="fa-solid fa-bars"></i></button> 
+                <!-- <div id="main-nav-links">
+                    <a href="/index.html" class="activeNav">Home</a>
+                    <a href="/contact.html" class="">Contact</a>
+                </div> -->
+                <div id="mobile-nav-links">
+                    <div id="ul-holder">
+                        <ul>
+                            <li><a href="/index.html" class="activeNav">Home</a>
+                            </li>
+                            <li><a href="/contact.html" class="">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="main-nav-holder">
-            <div id="small-head">
-                <h2>PTA | Home</h2>
-            </div>
-            <button id="main-burger"><i class="fa-solid fa-bars"></i></button> 
-            <div id="main-nav-links">
-                <a href="/index.html" class="activeNav">Home</a>
-                <a href="/whatis.html" class="">About</a>
-                <a href="/documents.html" class="">Documents</a>
-                <a href="/fayre.html" id="mf-nav-link" class="">May Fayre</a>
-                <a href="/auction.html" class="">Silent Auction 2025</a>
-                <a href="/contact.html" class="">Contact</a>
-            </div>
-            <div id="mobile-nav-links">
-                <div id="ul-holder">
-                    <ul>
-                        <li><a href="/index.html" class="activeNav">Home</a>
+
+        <!-- <a href="/indexNEW.html" class="">Home</a> -->
+        <div id="nav-holder">
+            <nav>
+                <h1>Charity Auction</h1>
+                <!-- <hr class="small-hr"> -->
+                <div id="nav-links">
+                    <!-- links to all sections -->
+                    <a href="#days-out" class="cat expand">Days Out</a>
+                    <a href="#food-drink" class="cat expand">Food & Drink</a>
+                    <a href="#beauty" class="cat expand">Health & Beauty</a>
+                    <a href="#kids" class="cat expand">Kids</a>
+                    <a href="#home" class="cat expand">Home & Garden</a>
+                </div>
+                <div id="nav-small">
+                    <!-- links to all sections -->
+                    <span id="burger"><i class="fa-solid fa-bars symbol" priorityfetch></i></span>
+                    <ul id="mini-nav" class="hidden">
+                        <li>
+                            <a href="#days-out" class="">Days Out</a>
                         </li>
-                        <li><a href="/whatis.html" class="">About</a>
+                        <li>
+                            <a href="#food-drink" class="">Food & Drink</a>
                         </li>
-                        <li><a href="/documents.html" class="">Documents</a>
+                        <li>
+                            <a href="#beauty" class="">Health & Beauty</a>
                         </li>
-                        <li><a href="/fayre.html" class=" ">May Fayre</a>
+                        <li>
+                            <a href="#kids" class="">Kids</a>
                         </li>
-                        <li><a href="/auction.html" class="">Silent Auction</a>
-                        </li>
-                        <li><a href="/contact.html" class="">Contact</a>
+                        <li>
+                            <a href="#home" class="">Home & Garden</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+                <div id=search-div>
+                    <input id="searchbar" onkeyup="search_prizes()" type="search" autocomplete="off" placeholder="Search prizes here..">
+                    <ul id='list'>
+                    </ul>
+                </div>
+                <div id="blurb">
+                    <p class="purple">
+                        <!-- See below a wonderful range of auction items to be won – from a week of summer activities for a child at King’s Camp, 
+                        to a round of golf for four, a magic escape room experience for 6 and Cream tea at Balgove Larder – there is something for everyone.  
+                        We would like to thank the wonderful Edinburgh and surrounding businesses who have very 
+                        kindly donated to this auction. This year we are raising money for STEM resources - we can’t wait to give the children more opportunities to explore the world in fun and exciting ways!! 
+                    </p> -->
+                    <p id="lastP">Contact <a class="purple" href="mailto:UPDATEHERE@gmail.com"><strong>UPDATEEMAIL@gmail.com</strong></a>.</p>
+                    
+                    <!-- Accordion -->
+                    <button class="accordion purple">Information</button>
+                    <div class="panel">
+                        <!-- <p>Please place your bid(s) for any one or more of the undernoted auction items before <strong>midnight on Saturday 10th May 2025</strong> (the “Closing Date”). Bidding is open to everyone and is not restricted to members of the Currie Primary School community. </p>
+                        <p>The highest bid as at the Closing Date will win the item.  If there is more than one bid of equal value as at the Closing Date a winner will be randomly drawn from those equal bids.  For this reason, we encourage you to place an original bid (i.e. £35.76, instead of £35.00). </p>
+                        <p>It’s a bit like blind bidding for a house – you might get lucky with a cheeky low bid (so please bid away!) but if you are keen to win the item we suggest you bid close to the estimated value shown on each item; all funds raised will benefit the children of Currie Primary School. </p>
+                                         -->
+                    </div>
+
+                    <button class="accordion purple">How To Bid</button>
+                    <div class="panel">
+                        <!-- <p>To place your bid please navigate to the desired item and click “Bid Now!”.  Complete the Bidding Form; Select “Submit” and  then “Bid” to place your bid.</p>
+                        <p>Bids can also be placed in person at the May Fayre.</p> -->
+                    </div>
+
+                    <button class="accordion purple">Winners</button>
+                    <div class="panel">
+                        <!-- <p>If your bid is successful you will be contacted by the PTA during the week commencing Monday 12th May to arrange payment.  If your bid is successful on more than one item you will be required to pay for all successful bids.  On receipt of payment to the PTA bank account, you will receive your item/voucher.  If any payments remain outstanding as at 5pm on Friday 16th May you will forfeit your item and the second highest bidder will be contacted.</p> -->
+                    </div>
+                </div>
+                <hr>
+            </nav>
         </div>
     </header>
-     
-    <div class="scroll-left">
-        <a href="/contact.html" class="scroll-link">
-            <p>We are always in need of volunteers.... Click this banner to help out!</p></a>
+
+    <!-- Prizes -->
+    <div id="maincont">
+        <h2 id="days-out">Days Out</h2>
+        <div class="category">
+            <div class="p-holder">
+                <div id="miningMuseum" class="p-title"><h3>National Mining Museum</h3></div>
+                <div class="p-image">
+                    <img src="/assets/images/prizes/mining.png" alt="National Mining museum logo" width="250" height="250"> 
+                </div>
+                <div class="p-desc">
+                    <p>Family Ticket (2 adults and 2 children (7+)). Value £<span class="value">21</span>.</p>
+                    <span>£</span><p class="current_highest">10</p>
+                    <a class="bid-link" href="#bid-form" data-prize-name="National Mining Museum" >Bid now!</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <h2 id="food-drink">Food & Drink</h2>
+        <div class="category">
+            <!-- <div class="p-holder">
+                <div id="roasters" class="p-title"><h3>Inverness Coffee Roasting Co</h3></div>
+                <div class="p-image">
+                    <img src="assets/images/prizes/coffee25.JPG" alt="Inverness Coffee Roasting Co image" width="250" height="250">
+                </div>
+                <div class="p-desc">
+                    <p>A variety of coffee. Worth £<span class="value">22.50</span>.</p>
+                    <a class="bid-link" href="#bid-form" data-prize-name="Inverness Coffee Roasting Co">Bid now!</a>
+                </div>
+            </div> -->
+        </div>
+        <hr>
+        <h2 id="beauty">Health and Beauty</h2>
+        <div class="category">
+
+            <!-- <div class="p-holder">
+                <div id="evolve" class="p-title"><h3>Evolve Fitness</h3></div>
+                <div class="p-image">
+                    <img src="https://evolvebootcampedinburgh.co.uk/wp-content/uploads/2023/07/Evolve-Logo.png" alt="Evolve fitness logo image" width="250" height="250">
+                </div>
+                <div class="p-desc">
+                    <p>One month free pass and access to all fitness classes in Penland View Park. Worth £<span class="value">50</span>.</p>
+                    <a class="bid-link" href="#bid-form" data-prize-name="Evolve Fitness">Bid now!</a>
+                </div>
+            </div> -->
+        </div>
+        <hr>
+        <h2 id="kids">Kids</h2>
+        <div class="category">
+            
+        </div>
+        <hr>
+        <h2 id="home">Home & Garden</h2>
+        <div class="category">
+
+        </div>
+    </div>
+    <hr>
+
+    <!-- Form conf modal -->
+    <div id="form-modal">
+        <div id="overlay"></div>
+        <div class="holder">
+            <div id="spin">
+                <div class="loadingio-spinner-spin-2by998twmg8"><div class="ldio-yzaezf3dcmj">
+                    <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+                </div></div>
+            </div>
+            <div id="check"><i class="fa-solid fa-circle-check"></i></div>
+        </div>
+        <div id="modal-header">
+            <h2>Bid Confirmation</h2>
+        </div>
+        <div id="modal-body" class="slant">
+        </div>
+        <div id="modal-but">
+            <button id="modal-cancel"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <button id="modal-submit" >BID</button>
+        </div>
     </div>
 
-    <div id="maincont" class="cover">
-        <div id="info">
-            <div id="info-overlay">
-                <div id="info-blurb">
-                    <!-- <span class="info-title"><strong>What are we?</strong></span> -->
-                    <p>
-                        🌟 <strong>Meet Your PTA: Making School Even Better!</strong> 🌟  
-                        <br>
-                        We’re a team of dedicated parent and carer volunteers with children across every stage of the school—from nursery to P7. <br>
-                        Our mission? To enhance the education and wellbeing of all pupils by funding and providing resources beyond what the Council typically covers.  
-                        <br>
-                        <br>
-                        🎯 <strong>What We Do:</strong> <br>
-                        ✅ Fundraise to support important school projects  <br>
-                        ✅ Distribute funds for resources that directly benefit students and teachers <br>
-                        ✅ Organize exciting events for pupils, parents, and carers  <br>
-                        <br>
-                        🎁 <strong>What We’ve Achieved Recently: </strong>  <br>
-                        🌱 Transformed the school garden into a thriving space  <br>
-                        🧪 Provided new STEM improvements for all years <br>
-                        📚 Supplied new reading books to inspire young minds  <br>
-                        📱 Provided iPads and classroom resources for interactive learning  <br>
-                        🎭 Paid for the Christmas panto —because every child deserves some magic!  
+    <!-- bidding form -->
+    <h2>Bidding Form</h2>
+    <div id="form-holder">
+        <!-- Updated for 2025 -->
+        <form method="POST" target="ifrm1" id="bid-form">      
 
-                    </p>
-                    
-                </div>
-            </div>
-                <div id="info-img">
-                <img src="./assets/images/gen/info2024.png" alt="Infograph 2024">
-            </div>
-        </div>
-
-        <!-- Slideshow container -->
-        <div id="slide-cont">                
-            <!-- 3 slide visible for large devices -->
-            <div class="large">
-                <div id="fundraising" class="slideshow-container">
-                    <div class="headings">
-                        <h2>Fundraising Events</h2>
-                        <small class="updated">Updated 24th Apr 2025</small>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <!-- <div class="fund-card bake">
-                            <div class="date-holder">
-                                <p class="date">
-                                    28 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    All School Bake Sale
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                            </div>
-                        </div> -->
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    10 May
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    May Fayre
-                                </h3>
-                                <p>
-                                    See our <a href="/fayre.html">May Fayre</a> site.
-                                    Get an early bid on the <a href="/auction.html">Silent Auction!</a>
-                                </p>
-                                <!-- <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a> -->
-                            </div>
-                        </div>
-                        <div class="fund-card bake">
-                            <div class="date-holder">
-                                <p class="date">
-                                    13 Jun
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    All School Bake Sale
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <!-- <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a> -->
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- <div class="mySlides fade">
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    25 Feb
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    26 Feb
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    27 Feb
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    1 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    2 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    3 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mySlides fade">
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    1 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    2 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="fund-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    3 Mar
-                                </p>
-                            </div>
-                            <div class="fund-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                    </div> -->
-                
-                    <!-- Next and previous buttons -->
-                    <a class="prev large" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="prev mobile" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next large" onclick="plusSlides(1)">&#10095;</a>
-                    <a class="next mobile" onclick="plusSlides(1)">&#10095;</a>
-
-                    <br>
-                    
-                    <!-- The dots/circles -->
-                    <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <!-- <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span> -->
-                    </div>
-                </div>
-                <div id="social" class="slideshow-container">
-                    <div class="headings">
-                        <h2>Meetings & Social Events</h2>
-                        <small class="updated">Updated 24th Apr 2025</small>
-                    </div>
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides2 fade">
-                        <!-- <div class="soc-card meeting">
-                            <div class="date-holder">
-                                <p class="date">
-                                    3 Mar
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    PTA Meeting
-                                </h3>
-                                <p>
-                                    Times: 19:00 - 20:00<br>
-                                    Details to follow in email but expect remote and in person options.
-                                </p>
-                            </div>
-                        </div> -->
-                        <div class="soc-card meeting">
-                            <div class="date-holder">
-                                <p class="date">
-                                    9 Jun
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    PTA Meeting
-                                </h3>
-                                <p>
-                                    Times: 19:00 - 20:00<br>
-                                    Details to follow in email but expect remote and in person options.
-                                </p>
-                            <!-- <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a> -->    
-                            </div>
-                        </div>
-                        <!-- <div class="soc-card bake">
-                            <div class="date-holder">
-                                <p class="date">
-                                    28 Mar
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    All School Bake Sale
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    10 May
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    May Fayre
-                                </h3>
-                            <p>
-                                See our <a href="/fayre.html">May Fayre</a> site.
-                            </p>
-                            <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                        </div>
-                        </div>
-                        <div class="soc-card bake">
-                            <div class="date-holder">
-                                <p class="date">
-                                    13 Jun
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    All School Bake Sale
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div> -->
-                    </div>
-                
-                    <!-- <div class="mySlides2 fade">
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    25 Feb
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    26 Feb
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    27 Feb
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="mySlides2 fade">
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    1 Mar
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    2 Mar
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                        <div class="soc-card">
-                            <div class="date-holder">
-                                <p class="date">
-                                    3 Mar
-                                </p>
-                            </div>
-                            <div class="soc-det-holder">
-                                <h3>
-                                    Parent and Carer Evening Social
-                                </h3>
-                                <p>
-                                    Details coming soon
-                                </p>
-                                <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                            </div>
-                        </div>
-                    </div> -->
-                
-                    <!-- Next and previous buttons -->
-                    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
-                    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
-                    <br>
-                    <!-- The dots/circles -->
-                    <div style="text-align:center">
-                        <span class="dot2" onclick="currentSlide2(1)"></span>
-                        <!-- <span class="dot2" onclick="currentSlide2(2)"></span>
-                        <span class="dot2" onclick="currentSlide2(3)"></span> -->
-                    </div>
-                </div>
-            </div>
-                <!--mobile slideshow -->
-            <div class="mobile">
-                <div id="mob-fundraising" class="mob-slideshow-cont">
-                    <div class="headings">
-                        <h2>Fundraising Events</h2>
-                        <small class="updated">Updated 24th Apr 2025</small>
-                    </div>
-                    <!-- MOBILE SLIDES TEST -->
-                    <!-- <div class="fade small-fund-card bake">
-                        <div class="date-holder">
-                            <p class="date">
-                                28 Mar
-                            </p>
-                        </div>
-                        <div class="fund-det-holder">
-                            <h3>
-                                All School Bake Sale
-                            </h3>
-                            <p>
-                                Details coming soon
-                            </p>
-                            <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a>
-                        </div>
-                    </div> -->
-                    <div class="fade small-fund-card">
-                        <div class="date-holder">
-                            <p class="date">
-                                10 May
-                            </p>
-                        </div>
-                        <div class="fund-det-holder">
-                            <h3>
-                                May Fayre
-                            </h3>
-                            <p>
-                                See our <a href="/fayre.html">May Fayre</a> site.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="fade small-fund-card bake">
-                        <div class="date-holder">
-                            <p class="date">
-                                13 Jun
-                            </p>
-                        </div>
-                        <div class="fund-det-holder">
-                            <h3>
-                                All School Bake Sale
-                            </h3>
-                            <p>
-                                Details coming soon
-                            </p>
-                        </div>
-                    </div>
-
-                    <a class="mob-prev" onclick="mobPlusSlides(-1)">&#10094;</a>
-                    <a class="mob-next" onclick="mobPlusSlides(1)">&#10095;</a>
-
-                    <div style="text-align:center">
-                        <!-- <span class="mob-dot" onclick="mobCurrentSlide(1)"></span> -->
-                        <span class="mob-dot" onclick="mobCurrentSlide(2)"></span>
-                        <span class="mob-dot" onclick="mobCurrentSlide(3)"></span>
-                    </div>
-                </div>
-                <div id="mob-soc" class="mob-slideshow-cont">
-                    <div class="headings">
-                        <h2>Meetings & Social Events</h2>
-                        <small class="updated">Updated 24th Apr 2025</small>
-                    </div>
-                    <!-- <div class="fade small-soc-card meeting">
-                        <div class="date-holder">
-                            <p class="date">
-                                3 Mar
-                            </p>
-                        </div>
-                        <div class="soc-det-holder">
-                            <h3>
-                                PTA Meeting
-                            </h3>
-                        <p>
-                            Times: 19:00 - 20:00<br>
-                            Details to follow in email but expect remote and in person options.
-                        </p>
-                        </div> 
-                    </div> -->
-                    <div class="fade small-soc-card meeting">
-                        <div class="date-holder">
-                            <p class="date">
-                                9 Jun
-                            </p>
-                        </div>
-                        <div class="soc-det-holder">
-                            <h3>
-                                PTA Meeting
-                            </h3>
-                            <p>
-                                Times: 19:00 - 20:00<br>
-                                Details to follow in email but expect remote and in person options.
-                            </p>
-                            <!-- <a target="_blank" href="https://calendar.google.com/calendar/r/eventedit?text=PTA+Event+1&dates=20240617T2100Z/20240617T2300Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=Currie+Primary+School-+Currie-+EH14+5PU">Add to Google Calendar</a> -->
-                        </div>
-                    </div>
-                    
-                    <a class="mob-prev2" onclick="mobPlusSlides2(-1)">&#10094;</a>
-                    <a class="mob-next2" onclick="mobPlusSlides2(1)">&#10095;</a>
-
-                    <div style="text-align:center">
-                        <!-- <span class="mob-dot2" onclick="mobCurrentSlide2(1)"></span> -->
-                        <span class="mob-dot2" onclick="mobCurrentSlide2(2)"></span>
-                        <!-- <span class="mob-dot2" onclick="mobCurrentSlide2(3)"></span>
-                        <span class="mob-dot2" onclick="mobCurrentSlide2(4)"></span>
-                        <span class="mob-dot2" onclick="mobCurrentSlide2(5)"></span>
-                        <span class="mob-dot2" onclick="mobCurrentSlide2(6)"></span> -->
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- <form method="POST" target="ifrm1" action="https://script.google.com/macros/s/AKfycbweRhA5MwdMxGOjNHTT8gLiRqXdTQbJpDOPTTrANsRCcSruQPjbaTan5DbhmeDzAGa9Bw/exec" id="bid-form">       -->
+            <input type="datetime-local" name="Date" hidden>
+            <input id="timeInput" type="time" name="Time" hidden>
+            <label for="name">Name:</label>
+            <input id="name" name="Name" type="text" autocomplete="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input name="Email" id="email" type="email" autocomplete="email" required>
+            <br>
+            <label for="p-search">Prize:</label>
+            <input type="text" name="Prize" id="p-search" required placeholder="Click on 'Bid now!'.">
+            <br>
+            <label for="amount">Amount (£):<span id="bid-amount"></span></label>
+            <input name="Bid" id="amount" type="number" min="1" step="0.01" required placeholder="Min bid is £1, no max.">
+            <br>
+            <label for="consent" class="consent expand">Please tick to consent to Dentons using this data for the purposes of the 2026 Charity Auction<input name="consent" id="consent" type="checkbox" required></label>
+            <button id="submit" class="expand">Submit</button>
+            <a href="#" id="previous" class="expand">Return to prizes</a>
+            <a class="email expand" href="mailto:UPDATEEMAIL@gmail.com">Contact Us <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+        </form>
+        <!-- iframe to hide the gsheets status -->
+        <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe>
     </div>
 
     <!-- BTT Button -->
@@ -654,15 +235,14 @@
 
     <footer>
         <div>
-            <a href="mailto:e.colquhoun23@gmail.com">© AusfugDevServices 2024</a><span> | </span>
+            <a href="mailto:e.colquhoun23@gmail.com">© AusfugDevServices 2025</a><span> | </span>
             <a href="#" class="termly-display-preferences">Cookie Preferences</a><span> | </span>
             <a class="privacy" href="/privacy.html" target="_blank">Privacy Policy</a>
         </div>
     </footer>
 
- 
-    <!-- <script src="assets/js/accscript.js"></script> -->
-    <script src="assets/js/slideshow.js"></script>
+    <script src="assets/js/accscript.js"></script>
     <script src="assets/js/mainScript.js"></script>
+    <script src="assets/js/auctionScript.js"></script>
 </body>
 </html>

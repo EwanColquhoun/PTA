@@ -14,20 +14,20 @@ body {
 }
 
 .activeNav {
-    background-color: #9ed6f0;
-    color: #394a5e !important;
+    background-color: #efefef;
+    color: #702082 !important;
     font-weight: bold;
 }
 
 /* Header */
 header > div {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
 h1 {
-    color: #394a5e;
+    color: #702082;
 }
 
 p {
@@ -35,11 +35,13 @@ p {
 }
 
 #logo-block {
-    background: rgb(57,74,94);
-background: -moz-linear-gradient(90deg, rgba(57,74,94,1) 0%, rgba(116,210,255,0.7988445378151261) 34%);
-background: -webkit-linear-gradient(90deg, rgba(57,74,94,1) 0%, rgba(116,210,255,0.7988445378151261) 34%);
-background: linear-gradient(90deg, rgba(57,74,94,1) 0%, rgba(116,210,255,0.7988445378151261) 34%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endColorstr="#74d2ff",GradientType=1);}
+    background: #fff;
+    display: flex;
+    padding: 0 2rem;
+    height: 7rem;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /* Navigation */
 #ul-holder {
@@ -47,11 +49,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 }
 
 #main-burger {
-    display: none;
-    position: absolute;
-    right: 1rem;
-    font-size: larger;
-    color: #394a5e;
+    font-size: xx-large;
+    color: #702082;
+    border: none;
+    background: none;
 }
 
 #small-head {
@@ -68,24 +69,24 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 .showNav{
     display: block !important;
     position: absolute;
-    background: #394a5e;
+    background: #702082;
     /* width: 50%; */
     right: 4rem;
     top: 1rem;
     z-index: 500;
-    box-shadow: 5px 5px 5px 5px #394a5e;
+    box-shadow: 5px 5px 5px 5px #702082;
     border-radius: 5px;
     transition: 0.6s ease;
     animation: fade;
 }
-
+/* 
 #main-nav-holder {
     max-width: 100%;
     margin: auto;
     margin-bottom: unset;
-    background-color: #394a5e;
+    background-color: #702082;
     height: 3rem;
-}
+} */
 
 #main-nav-links a, #ul-holder a {
     color: whitesmoke;
@@ -97,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 #main-nav-links hr {
     width: 2rem;
     float: left;
-    background-color: #9ed6f0;
+    background-color: #efefef;
     margin: 0.25rem 0;
 }
 
@@ -118,7 +119,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 
 .scroll-link:hover {
     transition: 500ms;
-    background-color: #483fc4;
+    background-color: #702082;
 }
 
 .scroll-left {
@@ -248,7 +249,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#394a5e",endCo
 
 .info-title {
     padding: 1rem;
-    color: #2453e9;
+    color: #702082;
     font-size: x-large;
 }
 
@@ -282,7 +283,7 @@ background: linear-gradient(0deg, rgba(225,225,182,0.7428221288515406) 0%, rgba(
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endColorstr="#c9e8f7",GradientType=1);}
 
 .fund-card, .soc-card {
-    background-color: #9ed6f0;
+    background-color: #efefef;
     margin: 0rem 1rem;
     width: 30%;
     position: relative;
@@ -324,7 +325,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1b6",endCo
 .event-card {
     background-image: url(/assets/images/gen/social.jpg);
     background-size: cover;
-    background-color: #9ed6f0;
+    background-color: #efefef;
     width: 30%;
     height: 300px;
     border-radius: 1%;
@@ -421,7 +422,7 @@ footer a {
     #mobile-nav-links {
         position: relative;
         width: 100vw;
-        background-color: #394a5e;
+        background-color: #702082;
         color: #f2f2f2;
     }
 
