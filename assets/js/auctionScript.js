@@ -23,52 +23,23 @@ let mCancel = document.getElementById('modal-cancel')
 let burger = document.getElementById('burger')
 let miniNav = document.getElementById('mini-nav')
 
-
 // Auction burger expand
 burger.addEventListener('click', function(){
     miniNav.classList.toggle('show')
 })
 
 // Mobile Auction Nav
-// function remove_nav(){
-//     if (miniNav.classList.contains('show')){
-//         miniNav.classList.remove('show')
-//         console.log('removed')
-//     } else {
-//         console.log('error')
-//     }
-// }
-
-// main.onclick = remove_nav;
-// blurb.onclick = remove_nav;
-
-
-// Retreive current bid
-function current_bid(prize){
-    const el = document.querySelector(`[data-prize-name="${prize}"]`);    
-    console.log(el)
-    if (el) {
-        let curr_high = el.previousElementSibling.innerText
-        console.log(curr_high);
-        highest_bid(curr_high);
+function remove_nav(){
+    if (miniNav.classList.contains('show')){
+        miniNav.classList.remove('show')
+        console.log('removed')
     } else {
-        console.log('No current bid found');
-    } 
-}
-
-// Compare and return highest bid
-function highest_bid(curr){
-    let bid = document.forms["bid-form"]["amount"].value;
-    if (bid > curr){
-        console.log(curr, bid)
-
-    } else {
-        console.log('No update to highest bid')
+        console.log('error')
     }
 }
 
-
-
+main.onclick = remove_nav;
+blurb.onclick = remove_nav;
 
 
 // get the new location and replaces href in backbutton
@@ -123,7 +94,7 @@ function validateForm() {
     let z = document.forms["bid-form"]["p-search"].value;
     let a = document.forms["bid-form"]["amount"].value;
     
-    // console.log(x,y,z,a)
+    console.log(x,y,z,a)
     if (x == "") {
       return false;
     } else if (y == "") {
@@ -141,14 +112,12 @@ function validateForm() {
 
 // Prevents submit and shows modal for confirmation
 function preventSubmit(event){
-    
-    let bid = document.forms["bid-form"]["amount"].value;
+
     let names = document.forms["bid-form"]["name"].value;
     let prize = document.forms["bid-form"]["p-search"].value;
+    let bid = document.forms["bid-form"]["amount"].value;
     let valid = validateForm();
     let state = dataConsent();
-    // for testing
-    current_bid(prize);
 
     if (valid == true){
         if (state){
@@ -172,14 +141,9 @@ function preventSubmit(event){
 // Allows modal to send form
 function modalSend(){
     let form = document.forms["bid-form"]
-    let prize = document.forms["bid-form"]["p-search"].value;
-    
-
     form.requestSubmit();
     modal.style.display = 'none',
     setTimeout(() => {form.reset(), 2000});
-    // Needs to have the bid update triggers after form has submitted.
-    // current_bid(prize);
 }
 
 
@@ -288,6 +252,7 @@ function search_prizes() {
 function remove_list(){
     list.style.display = 'none'
 }
+
 
 // main.onclick = remove_nav;
 // blurb.onclick = remove_nav;
