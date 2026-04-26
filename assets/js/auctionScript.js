@@ -143,6 +143,7 @@ function modalSend(){
     let form = document.forms["bid-form"]
     form.requestSubmit();
     modal.style.display = 'none',
+    console.log('modal')
     setTimeout(() => {form.reset(), 2000});
 }
 
