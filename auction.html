@@ -521,7 +521,7 @@
     <h2>Bidding Form</h2>
     <div id="form-holder">
         <!-- Updated for  -->
-        <form method="POST" target="ifrm1" action="https://script.google.com/macros/s/AKfycbzj0D65aNKn74AlnuLu1J5K92gTgMxvylIMGLsxl4qca6HL9vG477gDfPI8-DUjL3vbEg/exec" id="bid-form">      
+        <form name="bid-form" method="POST" target="ifrm1" action="https://script.google.com/macros/s/AKfycbzj0D65aNKn74AlnuLu1J5K92gTgMxvylIMGLsxl4qca6HL9vG477gDfPI8-DUjL3vbEg/exec" id="bid-form">      
 
             <input type="datetime-local" name="Date" hidden>
             <input id="timeInput" type="time" name="Time" hidden>
@@ -542,7 +542,7 @@
                 </label>
                 <input name="consent" id="consent" type="checkbox" required>
             </div>
-                <button id="submit" class="expand">Submit</button>
+            <button id="submit" class="expand">Submit</button>
             <a href="#" id="previous" class="expand">Return to prizes</a>
             <a class="email expand" href="mailto:currieptasilentauction@gmail.com">Contact Us <i class="fa fa-envelope" aria-hidden="true"></i>
             </a>
