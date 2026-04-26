@@ -336,10 +336,16 @@ nav .cat:hover {
 }
 
 form #consent {
-    margin: 1rem;
+    margin: auto;
+    margin-top: 1rem;
     display: inline-block;
     max-width: 50px;
     scale: 1.4;
+}
+
+#consent-div {
+    display: flex;
+    flex-direction: column;
 }
 
 .consent {
