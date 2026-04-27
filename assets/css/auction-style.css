@@ -340,11 +340,13 @@ form #consent {
     margin-top: 1rem;
     display: inline-block;
     max-width: 50px;
-    scale: 1.4;
+    transform: scale(1.4);
 }
 
 #consent-div {
+    display: -webkit-flex; /* older Safari support */
     display: flex;
+    -webkit-flex-direction: column; /* older Safari support */
     flex-direction: column;
 }
 
