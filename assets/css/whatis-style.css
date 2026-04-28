@@ -1,6 +1,6 @@
 #about-holder {
     background-image: url(/assets/images/gen/overview.jpg);
-    /* height: 100vh; */
+    height: 100%;
     position: relative;
     background-attachment: fixed;
 }
@@ -35,4 +35,10 @@
         left: 5%;
         position: relative;
     }
+
+    .questions {
+        padding: 0;
+    }
+
+
 }
