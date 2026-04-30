@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /auction.html/
+
+Sitemap: https://www.currirprimaryschoolpta.co.uk/sitemap.xml
