@@ -209,7 +209,7 @@ function update_list(){
     let pri = Array.from(document.getElementsByClassName('p-title'))
 
     for (i = 0; i < pri.length; i++){
-        let el = pri[i].innerHTML
+        let el = pri[i].innerText;
         let inner = el.replace('<h3>', '').replace('</h3>', '')
         // below gets the id ready for list attribute target.
         let pId = pri[i].getAttribute('id')
